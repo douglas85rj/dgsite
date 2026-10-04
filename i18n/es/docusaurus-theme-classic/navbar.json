@@ -1,0 +1,18 @@
+{
+  "title": {
+    "message": "Yo",
+    "description": "The title in the navbar"
+  },
+  "item.label.Infrastructure behind this site": {
+    "message": "Infraestructura detrás de la web",
+    "description": "Navbar item with label Infrastructure behind this site"
+  },
+  "item.label.Portfolio": {
+    "message": "Portafolio",
+    "description": "Navbar item with label Portfolio"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  }
+}

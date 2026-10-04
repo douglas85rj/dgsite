@@ -1,0 +1,143 @@
+{
+  "name": "Douglas",
+  "lastName": "Souza",
+  "title": "Infrastructure Solutions Analyst  - DevOps / Cloud Engineer",
+  "careerStartYear": 2017,
+  "contact": {
+    "email": "douglas85rj@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/douglas-monteiro-de-souza/",
+    "github": "github.com/douglas85rj",
+    "website": ""
+  },
+  "skills": ["Monitoramento", "AWS", "Terraform", "Docker", "GitLab CI", "Azure", "Bash", "javascript", "Go", "Kubernetes", "Linux", "Jenkins", "GitOps", "ArgoCD", "Helm"],
+  "badges": [
+    {
+      "url": "https://www.credly.com/earner/earned/badge/a710651e-82d2-41b9-83ab-6128ce5a94ae",
+      "image": "img/awscloudpractitioner.png",
+      "alt": "AWS Certified Cloud Practitioner badge",
+      "name": "AWS Certified Cloud Practitioner"
+    },
+    {
+      "url": "https://www.credly.com/earner/earned/badge/3a64dea5-a5e5-414f-aae6-d20fd7a8476b",
+      "image": "img/GitHubFoundations.png",
+      "alt": "GitHub Foundations badge",
+      "name": "GitHub Foundations"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/users/douglasmonteirodesouza/credentials/a4aecdb9b494163f?ref=https%3A%2F%2Fwww.linkedin.com%2F",
+      "image": "img/microsoft-certified-fundamentals-badge.png",
+      "alt": "Microsoft Certified: Azure Fundamentals badge",
+      "name": "Microsoft Certified: Azure Fundamentals"
+    }
+    
+  ],
+  "description": [
+    "Infrastructure Analyst & DevOps engineer with {yearsExp}+ years of experience, specialized in Infrastructure as Code with strong expertise in AWS and Kubernetes to build scalable, secure, and reliable platforms.",
+    "Strong focus on CI/CD, experienced in designing Jenkins pipelines for Unity game builds and Docker image builds. Adept in GitOps CD using Helm and ArgoCD.",
+    "Triple-certified (AWS Cloud Practitioner, GitHub Foundations, Microsoft Certified: Azure Fundamentals) with cross-industry experience spanning: gaming, financial services, and cloud consulting. Strong focus on reliability, cost optimisation, and developer velocity."
+  ],
+  "description_es": [
+    "Ingeniero SRE y DevOps con {yearsExp}+ años de experiencia, especializado en Infraestructura como Código con sólida expertise en AWS y Kubernetes para construir plataformas escalables, seguras y fiables.",
+    "Gran foco en CI/CD, con experiencia en diseño de pipelines Jenkins para builds de videojuegos Unity e imágenes Docker. Especializado en CD GitOps usando Helm y ArgoCD.",
+    "Triple certificado (AWS Cloud Practitioner, GitHub Foundations, Microsoft Certified: Azure Fundamentals) con experiencia multisectorial en: videojuegos, servicios financieros y consultoría cloud. Gran foco en fiabilidad, optimización de costes y velocidad de desarrollo."
+  ],
+  "profileImage": {
+    "src": "img/sitelogo.png",
+    "alt": "Photo of me (Douglas)"
+  },
+  "learnMoreLink": {
+    "url": "/docs/site-infrastructure"
+  },
+  "experiences": [
+    {
+      "type": "work",
+      "date": "Nov. 2024 - Present Day",
+      "date_es": "Nov. 2024 - Actualidad",
+      "title": "SRE - DevOps / Cloud Engineer",
+      "subtitle": "Ubisoft Barcelona Mobile",
+      "description": [
+        "Operate and evolve a Kubernetes-based cloud platform on AWS, fully managed through Infrastructure-as-Code, supporting multiple mobile game teams with a scalable, resilient, and self-service platform.",
+        "- Platform stack: Terraform, Terragrunt, AWS EKS, Istio, Vault + External Secrets, External DNS, Atlantis, Atlas MongoDB, Grafana Loki, Opentelemetry, Kafka",
+        "Design, maintain, and improve the end-to-end CI/Build ecosystem for Unity Mobile game clients and backend Java container images.",
+        "- CI stack: Jenkins, Unity build Mac agents (Ansible managed), BuildKit (Docker), Trivy, GitLab.",
+        "Implement and maintain a GitOps-based CD ecosystem for server apps.",
+        "- CD stack: ArgoCD, Helm, Kubernetes."
+      ],
+      "description_es": [
+        "Opero y evoluciono una plataforma cloud basada en Kubernetes en AWS, completamente gestionada mediante Infraestructura como Código, dando soporte a múltiples equipos de videojuegos móviles con una plataforma escalable, resiliente y de autoservicio.",
+        "- Platform stack: Terraform, Terragrunt, AWS EKS, Istio, Vault + External Secrets, External DNS, Atlantis, Atlas MongoDB, Grafana Loki, Opentelemetry, Kafka",
+        "Diseño, mantenimiento y mejora del ecosistema CI/Build de extremo a extremo para clientes de videojuegos Unity Mobile e imágenes de contenedores Java backend.",
+        "- CI stack: Jenkins, Unity build Mac agents (Ansible managed), BuildKit (Docker), Trivy, GitLab.",
+        "Implementación y mantenimiento de un ecosistema CD basado en GitOps para aplicaciones de servidor.",
+        "- CD stack: ArgoCD, Helm, Kubernetes."
+      ]
+    },
+    {
+      "type": "work",
+      "date": "Apr. 2023 - Nov. 2024",
+      "date_es": "Abr. 2023 - Nov. 2024",
+      "title": "SRE - DevOps / Cloud Engineer",
+      "subtitle": "Allianz Technology",
+      "description": [
+        "Member of the platform team responsible for a self-service, everything-as-code AWS/Kubernetes platform supporting 300+ production microservices across 50+ development teams, provisioned through modular Terraform and independently operated by devs with Atlantis.",
+        "- Platform stack: Terraform, AWS EKS, Istio, Vault, Atlantis, AWS RDS, Kafka",
+        "Responsible of the CI/CD and build & release model for the applications delivered in the platform, applying code quality and DevSecOps best practices to ensure a secure and efficient software delivery process.",
+        "- CI stack: Jenkins, BuildKit (Docker), Trivy, Sonarqube, Github enterprise.",
+        "- CD stack: ArgoCD, Helm, Kubernetes, XLRelease",
+        "In addition to core platform responsibilities, designed and delivered an isolated PCI DSS compliant platform and CI/CD stack for payment-related services, driving the full migration of those workloads. Worked directly with PCI auditors and addressed specific compliance requirements to achieve and maintain certification. Provided training and guidance to the development teams operating the services to ensure correct platform adoption and compliance awareness."
+      ],
+      "description_es": [
+        "Miembro del equipo de plataforma responsable de una plataforma AWS/Kubernetes de autoservicio y todo-como-código, dando soporte a más de 300 microservicios en producción de más de 50 equipos de desarrollo, aprovisionada mediante Terraform modular y operada de forma independiente con Atlantis.",
+        "- Platform stack: Terraform, AWS EKS, Istio, Vault, Atlantis, AWS RDS, Kafka",
+        "Responsable del modelo de CI/CD y build & release para las aplicaciones de la plataforma, aplicando buenas prácticas de calidad de código y DevSecOps para garantizar un proceso de entrega de software seguro y eficiente.",
+        "- CI stack: Jenkins, BuildKit (Docker), Trivy, Sonarqube, Github enterprise.",
+        "- CD stack: ArgoCD, Helm, Kubernetes, XLRelease",
+        "Además de las responsabilidades principales de plataforma, diseñé y entregué una plataforma y un stack de CI/CD aislados y conformes con PCI DSS para servicios de pago, liderando la migración completa de los servicios PCI de pago. Trabajé directamente con auditores PCI y abordé requisitos de cumplimiento específicos para obtener y mantener la certificación. Proporcioné formación y orientación a los equipos de desarrollo que operaban los servicios para garantizar una adopción correcta de la plataforma y conciencia sobre el cumplimiento normativo."
+      ]
+    },
+    {
+      "type": "work",
+      "date": "Jan. 2021 - Apr. 2023",
+      "date_es": "Ene. 2021 - Abr. 2023",
+      "title": "SRE - DevOps / Cloud Consultant",
+      "subtitle": "Deloitte",
+      "description": [
+        "Cloud infrastructure projects for different clients, mainly centered in AWS using Terraform and with major focus on Kubernetes enviroments using AWS EKS.",
+        "Projects of CI/CD follwing GIT OPS. Mainly focusing on containerized environments using Jenkins / helm / ArgoCD.",
+        "Migrations to AWS cloud: on premise to EC2, on premise to containarization to EKS and cost optimization of already stablished clients."
+      ],
+      "description_es": [
+        "Proyectos de infraestructura cloud para distintos clientes, principalmente centrados en AWS con Terraform y con gran foco en entornos Kubernetes usando AWS EKS.",
+        "Proyectos de CI/CD siguiendo GitOps, principalmente en entornos contenerizados con Jenkins, Helm y ArgoCD.",
+        "Migraciones a cloud AWS: on-premise a EC2, on-premise a contenedores en EKS, y optimización de costes para clientes ya establecidos."
+      ]
+    },
+    {
+      "type": "work",
+      "date": "Jul. 2019 - Dec. 2020",
+      "date_es": "Jul. 2019 - Dic. 2020",
+      "title": "Junior Full stack Web Developer",
+      "title_es": "Desarrollador Web Full Stack Junior",
+      "subtitle": "BuyPower, Mataró",
+      "description": [
+        "Full stack developer, Implementing a S2P (Supplier to Pay) SAS web application for the internal use of the company, with a microservices architecture deployed in AWS and a Angular frontend.",
+        "- Back-end: Java, Spring, iHibernate, MySQL",
+        "- Front-end: Angular, HTML, CSS, JS, Bootstrap",
+        "Helping in the CI/CD Build and Test automation with Jenkins pipelines, CD with bash scripts and Docker compose in AWS EC2 instances."
+      ],
+      "description_es": [
+        "Desarrollador full stack, implementando una aplicación web SaaS de S2P (Supplier to Pay) para uso interno de la empresa, con arquitectura de microservicios desplegada en AWS y frontend Angular.",
+        "- Back-end: Java, Spring, iHibernate, MySQL",
+        "- Front-end: Angular, HTML, CSS, JS, Bootstrap",
+        "Colaboración en la automatización de build y test con pipelines Jenkins, CD con scripts bash y Docker Compose en instancias AWS EC2."
+      ]
+    },
+    {
+      "type": "education",
+      "date": "2016 - 2020",
+      "title": "University degree in Software/Computer Engineering",
+      "title_es": "Grado en Ingeniería Informática",
+      "subtitle": "Tecnocampus"
+    }
+  ]
+}

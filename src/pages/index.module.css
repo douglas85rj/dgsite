@@ -1,0 +1,538 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+/* ── Hero banner ─────────────────────────────────────────── */
+.heroBanner {
+  padding: 5rem 0;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #001c38 0%, #003366 45%, #1a5080 100%);
+  background-size: 200% 200%;
+  animation: gradientShift 12s ease infinite;
+}
+
+/* Dot-grid texture overlay */
+.heroBanner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(102, 153, 204, 0.18) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
+}
+
+:global([data-theme='dark']) .heroBanner {
+  background: linear-gradient(135deg, #0d0909 0%, #201816 45%, #3a2820 100%);
+}
+
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ── Hero content columns ────────────────────────────────── */
+.heroContent {
+  animation: fadeSlideUp 0.7s ease both;
+}
+
+.heroImageCol {
+  animation: fadeSlideUp 0.7s ease 0.15s both;
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Name heading ────────────────────────────────────────── */
+.nameHeading {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 3.8rem !important;
+  font-weight: 800 !important;
+  line-height: 1.0 !important;
+  letter-spacing: 0.01em !important;
+  margin-bottom: 0.5rem !important;
+  background: linear-gradient(110deg, #ffffff 10%, #c8e4ff 55%, #6699cc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+:global([data-theme='dark']) .nameHeading {
+  background: linear-gradient(110deg, #ffffff 10%, #e8d8d2 55%, #b9a49c 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* ── Role title (live status indicator) ─────────────────── */
+.roleTitle {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.78rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 4px !important;
+  color: rgba(153, 204, 255, 0.9) !important;
+  border: none !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  margin-bottom: 1.8rem !important;
+  margin-top: 0.4rem !important;
+  line-height: 1.6 !important;
+}
+
+.roleTitle::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #39d353;
+  flex-shrink: 0;
+  box-shadow: 0 0 6px rgba(57, 211, 83, 0.7);
+  animation: statusPulse 2s ease-in-out infinite;
+}
+
+@keyframes statusPulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 6px rgba(57, 211, 83, 0.7); }
+  50%       { opacity: 0.4; box-shadow: 0 0 2px rgba(57, 211, 83, 0.2); }
+}
+
+:global([data-theme='dark']) .roleTitle {
+  color: rgba(185, 164, 156, 0.9) !important;
+}
+
+/* ── Profile image wrapper (radar rings) ────────────────── */
+.profileImgWrapper {
+  position: relative;
+  width: fit-content;
+  align-self: center;
+}
+
+.profileImgWrapper::before,
+.profileImgWrapper::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  border: 1px solid rgba(102, 153, 204, 0.4);
+}
+
+.profileImgWrapper::before {
+  inset: -20px;
+  animation: radarPing 3s ease-out infinite;
+}
+
+.profileImgWrapper::after {
+  inset: -48px;
+  animation: radarPing 3s ease-out 1.5s infinite;
+}
+
+:global([data-theme='dark']) .profileImgWrapper::before,
+:global([data-theme='dark']) .profileImgWrapper::after {
+  border-color: rgba(145, 116, 106, 0.4);
+}
+
+@keyframes radarPing {
+  0%   { opacity: 0.7; transform: scale(0.92); }
+  100% { opacity: 0;   transform: scale(1.08); }
+}
+
+/* ── Badges section ──────────────────────────────────────── */
+.badgesSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 1.5rem;
+}
+
+/* ── Section divider ─────────────────────────────────────── */
+.sectionDivider {
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--ifm-color-primary-dark) 20%,
+    var(--ifm-color-primary) 50%,
+    var(--ifm-color-primary-dark) 80%,
+    transparent 100%
+  );
+}
+
+/* ── Experience section ──────────────────────────────────── */
+.experienceSection {
+  position: relative;
+  padding-bottom: 4rem;
+}
+
+.sectionHeader {
+  text-align: center;
+  padding: 3.5rem 0 0.5rem;
+}
+
+.sectionHeader h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  position: relative;
+  display: inline-block;
+}
+
+.sectionHeader h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 56px;
+  height: 4px;
+  background: var(--ifm-color-primary);
+  border-radius: 2px;
+}
+
+/* ── Resume download button ──────────────────────────────── */
+.resumeButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  max-width: 340px;
+  margin-bottom: 10px;
+  padding: 10px 16px;
+  background: rgba(102, 153, 204, 0.1);
+  border: 1px solid rgba(102, 153, 204, 0.35);
+  border-radius: 8px;
+  color: rgba(153, 204, 255, 0.9);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: background 0.22s ease, border-color 0.22s ease, color 0.22s ease, transform 0.22s ease;
+}
+
+.resumeButton:hover {
+  background: rgba(102, 153, 204, 0.2);
+  border-color: rgba(102, 153, 204, 0.65);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.resumeIcon {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+/* ── Terminal / Infra CTA card ───────────────────────────── */
+.terminalLink {
+  display: block;
+  text-decoration: none;
+  max-width: 340px;
+  position: relative;
+}
+
+/* Floating arrow hint — sits outside the card to the left */
+.terminalArrowHint {
+  position: absolute;
+  right: calc(100% + 10px);
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  pointer-events: none;
+}
+
+.terminalHintLabel {
+  font-family: 'Courier New', monospace;
+  font-size: 0.48rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  color: rgba(74, 222, 128, 0.5);
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  animation: fadeFlicker 3s ease-in-out infinite;
+}
+
+@keyframes fadeFlicker {
+  0%, 100% { opacity: 0.5; }
+  50%       { opacity: 0.85; }
+}
+
+@media screen and (max-width: 996px) {
+  .terminalArrowHint {
+    display: none;
+  }
+}
+
+.terminalCard {
+  background: rgba(8, 13, 22, 0.82);
+  border: 1px solid rgba(102, 153, 204, 0.28);
+  border-radius: 10px;
+  backdrop-filter: blur(14px);
+  overflow: hidden;
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.terminalLink:hover .terminalCard {
+  transform: translateY(-6px);
+  border-color: rgba(102, 153, 204, 0.6);
+  box-shadow:
+    0 20px 52px rgba(0, 0, 0, 0.55),
+    0 0 36px rgba(57, 211, 83, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.07);
+}
+
+/* Window chrome bar */
+.terminalBar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.dot:nth-child(1) { background: #ff5f57; }
+.dot:nth-child(2) { background: #febc2e; }
+.dot:nth-child(3) { background: #28c840; }
+
+.terminalTitle {
+  font-family: 'Courier New', monospace;
+  font-size: 0.68rem;
+  color: rgba(255, 255, 255, 0.35);
+  flex: 1;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+
+.liveTag {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #39d353;
+}
+
+.livePulse {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #39d353;
+  animation: liveGlow 1.8s ease-in-out infinite;
+}
+
+@keyframes liveGlow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(57, 211, 83, 0.8); }
+  60%       { box-shadow: 0 0 0 5px rgba(57, 211, 83, 0); }
+}
+
+/* Body */
+.terminalBody {
+  padding: 14px 16px 12px;
+}
+
+.cmdLine {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+  margin-bottom: 10px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.8rem;
+}
+
+.cmd {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+@keyframes nudge {
+  0%, 100% { transform: translateX(0); opacity: 0.6; }
+  50%       { transform: translateX(7px); opacity: 1; }
+}
+
+.cmdArrow {
+  color: #4ade80;
+  font-size: 1.5rem;
+  line-height: 1;
+  animation: nudge 1.2s ease-in-out infinite;
+  display: inline-block;
+  filter: drop-shadow(0 0 5px rgba(74, 222, 128, 0.55));
+}
+
+.cmdPrompt {
+  color: #4ade80;
+  flex-shrink: 0;
+  opacity: 0.8;
+}
+
+/* Pipeline */
+.pipeline {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 11px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.68rem;
+}
+
+.stage {
+  color: #39d353;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.pipeArrow {
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 0.62rem;
+}
+
+/* Tech pills */
+.techRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 13px;
+}
+
+.techPill {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  color: rgba(153, 204, 255, 0.88);
+  border: 1px solid rgba(102, 153, 204, 0.35);
+  border-radius: 4px;
+  padding: 2px 8px;
+  background: rgba(102, 153, 204, 0.08);
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.terminalLink:hover .techPill {
+  background: rgba(102, 153, 204, 0.15);
+  border-color: rgba(102, 153, 204, 0.55);
+}
+
+/* Footer CTA */
+.cta {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.45);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 11px;
+  letter-spacing: 0.02em;
+  transition: color 0.22s ease;
+}
+
+.terminalLink:hover .cta {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.ctaArrow {
+  display: inline-block;
+  transition: transform 0.22s ease;
+}
+
+.terminalLink:hover .ctaArrow {
+  transform: translateX(5px);
+}
+
+/* ── Experience description ──────────────────────────────── */
+.descBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 6px;
+}
+
+.descProse {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.65;
+}
+
+/* Tech-stack card: left-accent border + label + pill row */
+.descStack {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 7px 11px;
+  background: rgba(0, 28, 56, 0.05);
+  border: 1px solid rgba(102, 153, 204, 0.18);
+  border-left: 3px solid var(--ifm-color-primary);
+  border-radius: 0 6px 6px 0;
+}
+
+:global([data-theme='dark']) .descStack {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(145, 116, 106, 0.2);
+  border-left-color: var(--ifm-color-primary);
+}
+
+.descStackLabel {
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ifm-color-primary-dark);
+  opacity: 0.6;
+}
+
+.descStackPills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.descStackPill {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: rgba(102, 153, 204, 0.1);
+  border: 1px solid rgba(102, 153, 204, 0.32);
+  color: var(--ifm-color-primary-darker);
+  white-space: nowrap;
+}
+
+:global([data-theme='dark']) .descStackPill {
+  background: rgba(145, 116, 106, 0.12);
+  border-color: rgba(145, 116, 106, 0.35);
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 2.5rem 1rem;
+  }
+  .nameHeading {
+    font-size: 2.8rem !important;
+  }
+}
