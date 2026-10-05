@@ -1,7 +1,6 @@
 ---
 sidebar_position: 1
 ---
-
 # Infrastructure behind this site
 
 ## Introduction
@@ -16,11 +15,11 @@ The setup includes an **always free Kubernetes cluster** using [Oracle Cloud](ht
 
 ## The webpage
 
-The site's code is stored in this [Github repository](https://github.com/ricardllop/dgsite), it is created using [Docusaurus](https://docusaurus.io/docs), a React-based static-site generator for fast, interactive sites, ideal for documentation, blogs, or personal projects.
+The site's code is stored in this [Github repository,](https://github.com/douglas85rj/dgsite) it is created using [Docusaurus](https://docusaurus.io/docs), a React-based static-site generator for fast, interactive sites, ideal for documentation, blogs, or personal projects.
 
 ## The Kubernetes cluster
 
-The Kubernetes cluster is hosted on [Oracle Cloud](https://www.oracle.com/es/cloud/), and it is declared using Terraform, the code is public in this [Github repository](https://github.com/ricardllop/tf-oci-cluster-infra).
+The Kubernetes cluster is hosted on [Oracle Cloud](https://www.oracle.com/es/cloud/), and it is declared using Terraform, the code is public in this [Github repository](https://github.com/douglas85rj/dgsite).
 
 The Terraform code is declaring all the necessary infrastructure resources on Oracle Cloud. (Only using **always free** resources). It is creating:
 
@@ -35,7 +34,7 @@ The [README.md](https://github.com/ricardllop/tf-oci-cluster-infra/blob/main/REA
 
 ## Helm charts & App of Apps
 
-Once the Kubernetes cluster is set, and ArgoCD is deployed using Terraform. Using ArgoCD and GitOps ([app of apps pattern](https://argo-cd.readthedocs.io/en/stable/operator-manual/cluster-bootstrapping/#app-of-apps-pattern)) we can deploy anything else that is desired to the Kubernetes cluster. For now, using Helm I deployed the Helm charts stored in this [Github repository](https://github.com/ricardllop/argocd-app-of-apps).
+Once the Kubernetes cluster is set, and ArgoCD is deployed using Terraform. Using ArgoCD and GitOps ([app of apps pattern](https://argo-cd.readthedocs.io/en/stable/operator-manual/cluster-bootstrapping/#app-of-apps-pattern)) we can deploy anything else that is desired to the Kubernetes cluster. For now, using Helm I deployed the Helm charts stored in this [Github repository.](https://github.com/douglas85rj/dgsite)
 
 For now I only have cert-manager & clusterissuer, ingress-nginx and my site as an nginx deployment Helm chart. More apps can simply be added to the [ArgoCD app of apps Github repository](https://github.com/ricardllop/argocd-app-of-apps/blob/main/values.yaml), and Argo will automatically sync and deploy any new app.
 
