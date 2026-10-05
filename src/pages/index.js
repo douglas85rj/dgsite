@@ -4,6 +4,7 @@ import Layout from '@theme/Layout';
 import styles from './index.module.css';
 import profileData from '@site/src/data/profile.json';
 import { downloadResume } from '@site/src/utils/generateResume';
+import AskDouglas from '@site/src/components/AskDouglas';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 
@@ -215,6 +216,7 @@ export default function Home() {
       <main>
         <Experience locale={locale} />
       </main>
+      <AskDouglas locale={locale} />
     </Layout>
   );
 }

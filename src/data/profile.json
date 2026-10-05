@@ -2,7 +2,7 @@
   "name": "Douglas",
   "lastName": "Souza",
   "title": "Infrastructure Solutions Analyst  - DevOps / Cloud Engineer",
-  "careerStartYear": 2017,
+  "careerStartYear": 2007,
   "contact": {
     "email": "douglas85rj@gmail.com",
     "linkedin": "https://www.linkedin.com/in/douglas-monteiro-de-souza/",
@@ -33,12 +33,12 @@
   ],
   "description": [
     "Infrastructure Analyst & DevOps engineer with {yearsExp}+ years of experience, specialized in Infrastructure as Code with strong expertise in AWS and Kubernetes to build scalable, secure, and reliable platforms.",
-    "Strong focus on CI/CD, experienced in designing Jenkins pipelines for Unity game builds and Docker image builds. Adept in GitOps CD using Helm and ArgoCD.",
+    "Focus on CI/CD, Docker image builds. Adept in GitOps CD using Helm and ArgoCD.",
     "Triple-certified (AWS Cloud Practitioner, GitHub Foundations, Microsoft Certified: Azure Fundamentals) with cross-industry experience spanning: gaming, financial services, and cloud consulting. Strong focus on reliability, cost optimisation, and developer velocity."
   ],
   "description_es": [
     "Ingeniero SRE y DevOps con {yearsExp}+ años de experiencia, especializado en Infraestructura como Código con sólida expertise en AWS y Kubernetes para construir plataformas escalables, seguras y fiables.",
-    "Gran foco en CI/CD, con experiencia en diseño de pipelines Jenkins para builds de videojuegos Unity e imágenes Docker. Especializado en CD GitOps usando Helm y ArgoCD.",
+    "foco en CI/CD,  imágenes Docker. Especializado en CD GitOps usando Helm y ArgoCD.",
     "Triple certificado (AWS Cloud Practitioner, GitHub Foundations, Microsoft Certified: Azure Fundamentals) con experiencia multisectorial en: videojuegos, servicios financieros y consultoría cloud. Gran foco en fiabilidad, optimización de costes y velocidad de desarrollo."
   ],
   "profileImage": {
@@ -51,21 +51,19 @@
   "experiences": [
     {
       "type": "work",
-      "date": "Nov. 2024 - Present Day",
-      "date_es": "Nov. 2024 - Actualidad",
-      "title": "SRE - DevOps / Cloud Engineer",
-      "subtitle": "Ubisoft Barcelona Mobile",
+      "date": "Feb. 2025 - Present",
+      "date_es": "Feb. 2025 - Actualidad",
+      "title": "Infrastructure Solutions Analyst",
+      "subtitle": "Hitss Brazil",
       "description": [
-        "Operate and evolve a Kubernetes-based cloud platform on AWS, fully managed through Infrastructure-as-Code, supporting multiple mobile game teams with a scalable, resilient, and self-service platform.",
-        "- Platform stack: Terraform, Terragrunt, AWS EKS, Istio, Vault + External Secrets, External DNS, Atlantis, Atlas MongoDB, Grafana Loki, Opentelemetry, Kafka",
-        "Design, maintain, and improve the end-to-end CI/Build ecosystem for Unity Mobile game clients and backend Java container images.",
-        "- CI stack: Jenkins, Unity build Mac agents (Ansible managed), BuildKit (Docker), Trivy, GitLab.",
-        "Implement and maintain a GitOps-based CD ecosystem for server apps.",
-        "- CD stack: ArgoCD, Helm, Kubernetes."
-      ],
+        "Operate and evolve a Kubernetes-based AWS cloud platform managed entirely through Infrastructure as Code, supporting multiple mobile game development teams with a scalable, resilient, and self-service platform.",
+        "- Platform stack: Grafana, SQL, Monitoring, GCP, AWS, Oracle",
+        "Monitor the platform, investigate and resolve critical incidents, and help maintain service reliability while minimizing disruption to development teams."],
       "description_es": [
         "Opero y evoluciono una plataforma cloud basada en Kubernetes en AWS, completamente gestionada mediante Infraestructura como Código, dando soporte a múltiples equipos de videojuegos móviles con una plataforma escalable, resiliente y de autoservicio.",
         "- Platform stack: Terraform, Terragrunt, AWS EKS, Istio, Vault + External Secrets, External DNS, Atlantis, Atlas MongoDB, Grafana Loki, Opentelemetry, Kafka",
+        "Monitoreo la plataforma, investigo y resuelvo incidentes críticos, contribuyendo a mantener la fiabilidad de los servicios y a minimizar las interrupciones para los equipos de desarrollo.",
+        "Desarrollo scripts y automatizo procesos operativos para estandarizar tareas recurrentes, mejorar la eficiencia y reducir la intervención manual.",
         "Diseño, mantenimiento y mejora del ecosistema CI/Build de extremo a extremo para clientes de videojuegos Unity Mobile e imágenes de contenedores Java backend.",
         "- CI stack: Jenkins, Unity build Mac agents (Ansible managed), BuildKit (Docker), Trivy, GitLab.",
         "Implementación y mantenimiento de un ecosistema CD basado en GitOps para aplicaciones de servidor.",
@@ -74,70 +72,116 @@
     },
     {
       "type": "work",
-      "date": "Apr. 2023 - Nov. 2024",
-      "date_es": "Abr. 2023 - Nov. 2024",
-      "title": "SRE - DevOps / Cloud Engineer",
-      "subtitle": "Allianz Technology",
+      "date": "Apr. 2024 - Jan. 2025",
+      "date_es": "Abr. 2024 - Ene. 2025",
+      "title": "Infrastructure Analyst",
+      "title_es": "Analista de infraestructura",
+      "subtitle": "T.O. Brasil",
       "description": [
-        "Member of the platform team responsible for a self-service, everything-as-code AWS/Kubernetes platform supporting 300+ production microservices across 50+ development teams, provisioned through modular Terraform and independently operated by devs with Atlantis.",
-        "- Platform stack: Terraform, AWS EKS, Istio, Vault, Atlantis, AWS RDS, Kafka",
-        "Responsible of the CI/CD and build & release model for the applications delivered in the platform, applying code quality and DevSecOps best practices to ensure a secure and efficient software delivery process.",
-        "- CI stack: Jenkins, BuildKit (Docker), Trivy, Sonarqube, Github enterprise.",
-        "- CD stack: ArgoCD, Helm, Kubernetes, XLRelease",
-        "In addition to core platform responsibilities, designed and delivered an isolated PCI DSS compliant platform and CI/CD stack for payment-related services, driving the full migration of those workloads. Worked directly with PCI auditors and addressed specific compliance requirements to achieve and maintain certification. Provided training and guidance to the development teams operating the services to ensure correct platform adoption and compliance awareness."
+        "Worked as an Infrastructure Analyst in Rio de Janeiro, Brazil.",
+        "- Platform stack: Grafana, SQL, Monitoring, GCP, AWS, Oracle"
       ],
       "description_es": [
-        "Miembro del equipo de plataforma responsable de una plataforma AWS/Kubernetes de autoservicio y todo-como-código, dando soporte a más de 300 microservicios en producción de más de 50 equipos de desarrollo, aprovisionada mediante Terraform modular y operada de forma independiente con Atlantis.",
-        "- Platform stack: Terraform, AWS EKS, Istio, Vault, Atlantis, AWS RDS, Kafka",
-        "Responsable del modelo de CI/CD y build & release para las aplicaciones de la plataforma, aplicando buenas prácticas de calidad de código y DevSecOps para garantizar un proceso de entrega de software seguro y eficiente.",
-        "- CI stack: Jenkins, BuildKit (Docker), Trivy, Sonarqube, Github enterprise.",
-        "- CD stack: ArgoCD, Helm, Kubernetes, XLRelease",
-        "Además de las responsabilidades principales de plataforma, diseñé y entregué una plataforma y un stack de CI/CD aislados y conformes con PCI DSS para servicios de pago, liderando la migración completa de los servicios PCI de pago. Trabajé directamente con auditores PCI y abordé requisitos de cumplimiento específicos para obtener y mantener la certificación. Proporcioné formación y orientación a los equipos de desarrollo que operaban los servicios para garantizar una adopción correcta de la plataforma y conciencia sobre el cumplimiento normativo."
+        "Trabajó como Analista de infraestructura en Río de Janeiro, Brasil.",
+        "- Platform stack: Grafana, SQL, Monitoring, GCP, AWS, Oracle"
       ]
     },
     {
       "type": "work",
-      "date": "Jan. 2021 - Apr. 2023",
-      "date_es": "Ene. 2021 - Abr. 2023",
-      "title": "SRE - DevOps / Cloud Consultant",
-      "subtitle": "Deloitte",
+      "date": "Mar. 2023 - Apr. 2024",
+      "date_es": "Mar. 2023 - Abr. 2024",
+      "title": "Full Stack Developer",
+      "title_es": "Desarrollador Full Stack",
+      "subtitle": "CAEFE - Caixa de Assistência dos Empregados de Furnas e Eletronuclear",
       "description": [
-        "Cloud infrastructure projects for different clients, mainly centered in AWS using Terraform and with major focus on Kubernetes enviroments using AWS EKS.",
-        "Projects of CI/CD follwing GIT OPS. Mainly focusing on containerized environments using Jenkins / helm / ArgoCD.",
-        "Migrations to AWS cloud: on premise to EC2, on premise to containarization to EKS and cost optimization of already stablished clients."
+        "Worked as a Full Stack Developer in Rio de Janeiro, Brazil.",
+        "- Platform stack: React, Java, SQL, Linux, JavaScript, Node.js"
       ],
       "description_es": [
-        "Proyectos de infraestructura cloud para distintos clientes, principalmente centrados en AWS con Terraform y con gran foco en entornos Kubernetes usando AWS EKS.",
-        "Proyectos de CI/CD siguiendo GitOps, principalmente en entornos contenerizados con Jenkins, Helm y ArgoCD.",
-        "Migraciones a cloud AWS: on-premise a EC2, on-premise a contenedores en EKS, y optimización de costes para clientes ya establecidos."
+        "Trabajó como Desarrollador Full Stack en Río de Janeiro, Brasil.",
+        "- Platform stack: React, Java, SQL, Linux, JavaScript, Node.js"
       ]
     },
     {
       "type": "work",
-      "date": "Jul. 2019 - Dec. 2020",
-      "date_es": "Jul. 2019 - Dic. 2020",
-      "title": "Junior Full stack Web Developer",
-      "title_es": "Desarrollador Web Full Stack Junior",
-      "subtitle": "BuyPower, Mataró",
+      "date": "Aug. 2013 - Apr. 2023",
+      "date_es": "Ago. 2013 - Abr. 2023",
+      "title": "Systems Analyst",
+      "title_es": "Analista de sistemas",
+      "subtitle": "CAEFE - Caixa de Assistência dos Empregados de Furnas e Eletronuclear",
       "description": [
-        "Full stack developer, Implementing a S2P (Supplier to Pay) SAS web application for the internal use of the company, with a microservices architecture deployed in AWS and a Angular frontend.",
-        "- Back-end: Java, Spring, iHibernate, MySQL",
-        "- Front-end: Angular, HTML, CSS, JS, Bootstrap",
-        "Helping in the CI/CD Build and Test automation with Jenkins pipelines, CD with bash scripts and Docker compose in AWS EC2 instances."
+        "Worked as a Systems Analyst in Rio de Janeiro, Brazil.",
+        "- Platform stack: React, Java, SQL, Linux, JavaScript, Node.js"
       ],
       "description_es": [
-        "Desarrollador full stack, implementando una aplicación web SaaS de S2P (Supplier to Pay) para uso interno de la empresa, con arquitectura de microservicios desplegada en AWS y frontend Angular.",
-        "- Back-end: Java, Spring, iHibernate, MySQL",
-        "- Front-end: Angular, HTML, CSS, JS, Bootstrap",
-        "Colaboración en la automatización de build y test con pipelines Jenkins, CD con scripts bash y Docker Compose en instancias AWS EC2."
+        "Trabajó como Analista de sistemas en Río de Janeiro, Brasil.",
+        "- Platform stack: React, Java, SQL, Linux, JavaScript, Node.js"
+      ]
+    },
+    {
+      "type": "work",
+      "date": "Feb. 2011 - Aug. 2012",
+      "date_es": "Feb. 2011 - Ago. 2012",
+      "title": "IT Analyst",
+      "title_es": "Analista de TI",
+      "subtitle": "Quality S.A.",
+      "description": [
+        "Worked as an IT Analyst in Rio de Janeiro, Brazil.",
+        "- Platform stack: Linux, Windows Server, pfSense, GLPI, Zabbix",
+        "Responsible for the entire infrastructure, including firewall configuration and management, Active Directory administration, and backup policy creation."
+      ],
+      "description_es": [
+        "Trabajó como Analista de TI en Río de Janeiro, Brasil.",
+        "- Platform stack: Linux, Windows Server, pfSense, GLPI, Zabbix",
+        "Responsable de toda la infraestructura, incluyendo la configuración y gestión del firewall, la administración de Active Directory y la creación de políticas de backup."
+      ]
+    },
+    {
+      "type": "work",
+      "date": "Jan. 2008 - Jan. 2011",
+      "date_es": "Ene. 2008 - Ene. 2011",
+      "title": "IT Technician",
+      "title_es": "Técnico de TI",
+      "subtitle": "Rioprevidência",
+      "description": [
+        "Help desk support.",
+        "Windows and Linux server administration.",
+        "IT contract management."
+      ],
+      "description_es": [
+        "Soporte de help desk.",
+        "Administración de servidores Windows y Linux.",
+        "Gestión de contratos de TI."
+      ]
+    },
+    {
+      "type": "work",
+      "date": "Jun. 2007 - Jan. 2008",
+      "date_es": "Jun. 2007 - Ene. 2008",
+      "title": "IT Technician",
+      "title_es": "Técnico de TI",
+      "subtitle": "Investiplan Computadores e Refrigeração Ltda.",
+      "description": [
+        "Installation, configuration, and administration of Windows Server environments.",
+        "End-user support for Windows, Office, and printers."
+      ],
+      "description_es": [
+        "Instalación, configuración y administración de entornos Windows Server.",
+        "Soporte a usuarios finales para Windows, Office e impresoras."
       ]
     },
     {
       "type": "education",
-      "date": "2016 - 2020",
-      "title": "University degree in Software/Computer Engineering",
+      "date": "2022 - 2023",
+      "title": "Postgraduate Degree/MIT Full Stack Web Development",
       "title_es": "Grado en Ingeniería Informática",
-      "subtitle": "Tecnocampus"
+      "subtitle": "InfnetInstitute, Rio de Janeiro",
+      "description": [
+        "Completed a postgraduate degree in Full Stack Web Development, focusing on modern web technologies and best practices."
+      ],
+      "description_es": [
+        "Completó un grado postgrado en Desarrollo Web Full Stack, enfocado en tecnologías web modernas y buenas prácticas."
+      ]
     }
   ]
 }
