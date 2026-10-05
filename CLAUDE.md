@@ -65,4 +65,4 @@ docker build -f Dockerfile-local -t dgsite:local .
 docker run -p 80:80 dgsite:local
 ```
 
-> **Note:** `npm run predeploy` and `npm run deploy` exist in `package.json` but are unused — deployment is via Docker/ArgoCD, not GitHub Pages. Do not use these scripts.
+> **Note:** Deployment is available through both Docker/ArgoCD and the GitHub Pages workflow. GitHub Pages runs `npm run build` and publishes the generated `build/` directory; `npm run serve` can be used to preview that build locally.

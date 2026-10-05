@@ -28,7 +28,13 @@ docker run -p 80:80 dgsite:local
 
 ## Deployment
 
-Pushing to `main` triggers a [GitHub Actions workflow](.github/workflows/build-deploy-docker.yml) that:
+Pushing to `main` triggers the [GitHub Pages workflow](.github/workflows/jekyll-gh-pages.yml), which:
+
+1. Installs the Node.js dependencies
+2. Runs `npm run build` to generate the production site
+3. Publishes the `build/` artifact to GitHub Pages
+
+The Docker deployment is also triggered by pushing to `main` through the [Docker workflow](.github/workflows/build-deploy-docker.yml), which:
 
 1. Builds a multi-stage Docker image for `linux/arm64` and pushes it to Docker Hub
 2. Updates the image tag in the Helm chart repo
