@@ -113,10 +113,6 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'Site Docker Image',
-                /*href: 'https://hub.docker.com/r/rllopdev/dgsite/tags',*/
-              },
-              {
                 label: 'GitHub',
                 href: 'https://github.com/douglas85rj',
               },

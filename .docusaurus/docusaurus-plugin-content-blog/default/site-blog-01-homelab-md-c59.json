@@ -1,0 +1,74 @@
+{
+  "permalink": "/blog/homelab",
+  "editUrl": "https://github.com/douglas85rj/dgsite/blog/01-homelab.md",
+  "source": "@site/blog/01-homelab.md",
+  "title": "Docker compose Homelab",
+  "description": "This article is about a self-hosted homelab running on a dedicated mini PC in a home network, managed entirely with Docker Compose. The setup provides photo management, media streaming, network-level ad blocking, automatic TLS reverse proxying, and dynamic DNS — all accessible from anywhere via a public domain or locally via .local hostnames.",
+  "date": "2017-03-31T22:00:00.000Z",
+  "tags": [
+    {
+      "inline": true,
+      "label": "DevOps",
+      "permalink": "/blog/tags/dev-ops"
+    },
+    {
+      "inline": true,
+      "label": "Homelab",
+      "permalink": "/blog/tags/homelab"
+    },
+    {
+      "inline": true,
+      "label": "Docker",
+      "permalink": "/blog/tags/docker"
+    },
+    {
+      "inline": true,
+      "label": "Caddy",
+      "permalink": "/blog/tags/caddy"
+    },
+    {
+      "inline": true,
+      "label": "Immich",
+      "permalink": "/blog/tags/immich"
+    },
+    {
+      "inline": true,
+      "label": "Adguard",
+      "permalink": "/blog/tags/adguard"
+    },
+    {
+      "inline": true,
+      "label": "Jellyfin",
+      "permalink": "/blog/tags/jellyfin"
+    }
+  ],
+  "readingTime": 4.32,
+  "hasTruncateMarker": false,
+  "authors": [
+    {
+      "name": "Ricard Llop",
+      "title": "DevOps engineer",
+      "url": "https://github.com/ricardllop",
+      "imageURL": "https://github.com/ricardllop.png",
+      "key": "rllop",
+      "page": null
+    }
+  ],
+  "frontMatter": {
+    "slug": "homelab",
+    "title": "Docker compose Homelab",
+    "authors": [
+      "rllop"
+    ],
+    "tags": [
+      "DevOps",
+      "Homelab",
+      "Docker",
+      "Caddy",
+      "Immich",
+      "Adguard",
+      "Jellyfin"
+    ]
+  },
+  "unlisted": false
+}
