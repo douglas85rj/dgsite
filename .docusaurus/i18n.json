@@ -1,12 +1,12 @@
 {
-  "defaultLocale": "en",
+  "defaultLocale": "pt-BR",
   "locales": [
     "en",
     "es",
     "pt-BR"
   ],
   "path": "i18n",
-  "currentLocale": "en",
+  "currentLocale": "pt-BR",
   "localeConfigs": {
     "en": {
       "label": "English",
@@ -16,7 +16,7 @@
       "path": "en",
       "translate": false,
       "url": "http://localhost:80",
-      "baseUrl": "/"
+      "baseUrl": "/en/"
     },
     "es": {
       "label": "Español",
@@ -36,7 +36,7 @@
       "path": "pt-BR",
       "translate": true,
       "url": "http://localhost:80",
-      "baseUrl": "/pt-BR/"
+      "baseUrl": "/"
     }
   }
 }

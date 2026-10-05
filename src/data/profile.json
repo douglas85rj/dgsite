@@ -33,19 +33,19 @@
     
   ],
   "description": [
-    "Infrastructure Analyst & DevOps engineer with {yearsExp}+ years of experience, specialized in Infrastructure as Code with strong expertise in AWS and Kubernetes to build scalable, secure, and reliable platforms.",
-    "Focus on CI/CD, Docker image builds. Adept in GitOps CD using Helm and ArgoCD.",
-    "Triple-certified (AWS Cloud Practitioner, GitHub Foundations, Microsoft Certified: Azure Fundamentals) with cross-industry experience spanning: gaming, financial services, and cloud consulting. Strong focus on reliability, cost optimisation, and developer velocity."
+    "Infrastructure Solutions Analyst and DevOps Engineer with {yearsExp}+ years of experience across cloud infrastructure, DevOps, SRE, systems administration, and full-stack development.",
+    "Experienced with AWS, Azure, Docker, Kubernetes, Terraform, CI/CD, monitoring, observability, and infrastructure automation, with a focus on scalable solutions, process optimization, and operational efficiency.",
+    "Adaptable and committed to continuous learning and knowledge sharing, currently focused on Cloud Infrastructure, DevOps, and SRE opportunities involving infrastructure automation, CI/CD pipelines, observability, and DevOps culture."
   ],
   "description_es": [
-    "Ingeniero SRE y DevOps con {yearsExp}+ años de experiencia, especializado en Infraestructura como Código con sólida expertise en AWS y Kubernetes para construir plataformas escalables, seguras y fiables.",
-    "foco en CI/CD,  imágenes Docker. Especializado en CD GitOps usando Helm y ArgoCD.",
-    "Triple certificado (AWS Cloud Practitioner, GitHub Foundations, Microsoft Certified: Azure Fundamentals) con experiencia multisectorial en: videojuegos, servicios financieros y consultoría cloud. Gran foco en fiabilidad, optimización de costes y velocidad de desarrollo."
+    "Analista de Soluciones de Infraestructura e Ingeniero DevOps con más de {yearsExp} años de experiencia en infraestructura cloud, DevOps, SRE, administración de sistemas y desarrollo full stack.",
+    "Experiencia con AWS, Azure, Docker, Kubernetes, Terraform, CI/CD, monitorización, observabilidad y automatización de infraestructura, con foco en soluciones escalables, optimización de procesos y eficiencia operativa.",
+    "Profesional adaptable y comprometido con el aprendizaje continuo y el intercambio de conocimientos, actualmente enfocado en oportunidades de Infraestructura Cloud, DevOps y SRE relacionadas con automatización, pipelines CI/CD, observabilidad y cultura DevOps."
   ],
   "description_pt": [
-    "Analista de Infraestrutura e engenheiro DevOps com mais de {yearsExp} anos de experiência, especializado em Infraestrutura como Código e com forte conhecimento em AWS e Kubernetes para construir plataformas escaláveis, seguras e confiáveis.",
-    "Foco em CI/CD e na criação de imagens Docker. Experiência com CD GitOps usando Helm e ArgoCD.",
-    "Triplamente certificado (AWS Cloud Practitioner, GitHub Foundations e Microsoft Certified: Azure Fundamentals), com experiência em diferentes setores: jogos, serviços financeiros e consultoria em cloud. Forte foco em confiabilidade, otimização de custos e produtividade de desenvolvimento."
+    "Analista de Soluções de Infraestrutura e Engenheiro DevOps com mais de {yearsExp} anos de experiência em infraestrutura cloud, DevOps, SRE, administração de sistemas e desenvolvimento full stack.",
+    "Experiência com AWS, Azure, Docker, Kubernetes, Terraform, CI/CD, monitoramento, observabilidade e automação de infraestrutura, com foco em soluções escaláveis, otimização de processos e eficiência operacional.",
+    "Profissional adaptável e comprometido com aprendizado contínuo e compartilhamento de conhecimento, atualmente focado em oportunidades de Infraestrutura Cloud, DevOps e SRE envolvendo automação de infraestrutura, pipelines CI/CD, observabilidade e cultura DevOps."
   ],
   "profileImage": {
     "src": "img/sitelogo.png",

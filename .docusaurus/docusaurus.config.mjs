@@ -13,7 +13,7 @@ export default {
   "projectName": "dgsite",
   "onBrokenLinks": "throw",
   "i18n": {
-    "defaultLocale": "en",
+    "defaultLocale": "pt-BR",
     "locales": [
       "en",
       "es",
@@ -58,7 +58,7 @@ export default {
       "disableSwitch": false
     },
     "navbar": {
-      "title": "Me",
+      "title": "Eu",
       "logo": {
         "alt": "My Site Logo",
         "src": "img/sitelogo.png"
@@ -68,11 +68,11 @@ export default {
           "type": "docSidebar",
           "sidebarId": "tutorialSidebar",
           "position": "left",
-          "label": "Infrastructure behind this site"
+          "label": "Infraestrutura por trás deste site"
         },
         {
           "to": "/blog",
-          "label": "Portfolio",
+          "label": "Portfólio",
           "position": "left"
         },
         {
@@ -93,33 +93,33 @@ export default {
       "style": "dark",
       "links": [
         {
-          "title": "Docs",
+          "title": "Documentação",
           "items": [
             {
-              "label": "How is this hosted",
+              "label": "Como este site é hospedado",
               "to": "/docs/site-infrastructure"
             },
             {
-              "label": "Portfolio",
+              "label": "Portfólio",
               "to": "/blog"
             }
           ]
         },
         {
-          "title": "Contact",
+          "title": "Contato",
           "items": [
             {
-              "label": "Linkedin",
+              "label": "LinkedIn",
               "href": "https://www.linkedin.com/in/douglas-monteiro-de-souza/"
             },
             {
-              "label": "Mail",
+              "label": "E-mail",
               "href": "mailto:douglas85rj@gmail.com"
             }
           ]
         },
         {
-          "title": "More",
+          "title": "Mais",
           "items": [
             {
               "label": "GitHub",
