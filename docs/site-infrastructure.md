@@ -21,12 +21,12 @@ The site's code is stored in this [Github repository,](https://github.com/dougla
 
 The Kubernetes cluster is hosted on [Oracle Cloud](https://www.oracle.com/es/cloud/), and it is declared using Terraform, the code is public in this [Github repository](https://github.com/douglas85rj/dgsite).
 
-The Terraform code is declaring all the necessary infrastructure resources on Oracle Cloud. (Only using **always free** resources). It is creating:
+The Terraform code in [`infra/terraform`](https://github.com/douglas85rj/dgsite/tree/main/infra/terraform) declares the necessary infrastructure resources on Oracle Cloud (only **Always Free** shapes). It creates:
 
 - 1 VCN
 - 2 subnets (1 public, 1 private)
 - 1 OKE (Oracle) Kubernetes cluster
-- 1 Node pool for the cluster. Formed by 2 instances of VM.Standard.A1.Flex 2 OCPUs and 12 GB each, making use of the limit [Always free compute of Oracle Cloud](https://docs.oracle.com/en-us/iaas/Content/FreeTier/freetier_topic-Always_Free_Resources.htm#compute).
+- 1 node pool with 2 instances of VM.Standard.A1.Flex, 2 OCPUs and 12 GB each (4 OCPUs and 24 GB total), consuming the [Always Free compute limit of Oracle Cloud](https://docs.oracle.com/en-us/iaas/Content/FreeTier/freetier_topic-Always_Free_Resources.htm#compute).
 
 It also has a 2nd part to deploy [ArgoCD](https://argo-cd.readthedocs.io/en/stable/) using Terraform. ArgoCD along with the [app of apps pattern](https://argo-cd.readthedocs.io/en/stable/operator-manual/cluster-bootstrapping/#app-of-apps-pattern) are then used to deploy the rest of needed resources to the Kubernetes cluster.
 
@@ -36,7 +36,7 @@ The [README.md](https://github.com/ricardllop/tf-oci-cluster-infra/blob/main/REA
 
 Once the Kubernetes cluster is set, and ArgoCD is deployed using Terraform. Using ArgoCD and GitOps ([app of apps pattern](https://argo-cd.readthedocs.io/en/stable/operator-manual/cluster-bootstrapping/#app-of-apps-pattern)) we can deploy anything else that is desired to the Kubernetes cluster. For now, using Helm I deployed the Helm charts stored in this [Github repository.](https://github.com/douglas85rj/dgsite)
 
-For now I only have cert-manager & clusterissuer, ingress-nginx and my site as an nginx deployment Helm chart. More apps can simply be added to the [ArgoCD app of apps Github repository](https://github.com/ricardllop/argocd-app-of-apps/blob/main/values.yaml), and Argo will automatically sync and deploy any new app.
+The site chart is stored in [`charts/dgsite`](https://github.com/douglas85rj/dgsite/tree/main/charts/dgsite). The Terraform bootstrap creates an Argo CD root Application using the app-of-apps approach; additional applications can be added as manifests under the same GitOps tree.
 
 ## Setting up the CI for the site
 

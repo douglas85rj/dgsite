@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: dgsite
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: ${repository}
+    targetRevision: main
+    path: charts/dgsite
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: dgsite
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true

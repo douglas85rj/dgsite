@@ -1,0 +1,27 @@
+image:
+  repository: docker.io/douglas85rj/dgsite
+  tag: latest
+  pullPolicy: IfNotPresent
+
+replicaCount: 2
+
+service:
+  type: LoadBalancer
+  port: 80
+  annotations:
+    oci.oraclecloud.com/load-balancer-type: "nlb"
+
+ingress:
+  enabled: false
+  className: nginx
+  annotations: {}
+  host: dgsite.com
+  tls: []
+
+resources:
+  requests:
+    cpu: 50m
+    memory: 64Mi
+  limits:
+    cpu: 250m
+    memory: 256Mi

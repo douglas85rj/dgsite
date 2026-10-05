@@ -1,0 +1,11 @@
+compartment_id     = "ocid1.tenancy.oc1..aaaaaaaa6xqb75lxqyuob6cvn4stye5uezwv6fkcjnzqraau7gua2odiifzq"
+region             = "sa-saopaulo-1"
+oci_profile        = "DEFAULT"
+kubernetes_version = "v1.36.4"
+node_image_id      = "ocid1.image.oc1.sa-saopaulo-1.aaaaaaaa5m4as2vf73y4fcyr5s4hwoc4r6wnc6x7qsqx2hlng5zftd5pjpfa"
+ssh_public_key     = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCkYVOCzOpXDuvER0KGTc3rbYwQBNFNVJVaTdqqw8katy5M7DgCiID4koWG+F/xWtRl8Lx6JYsYEq8UGnxvzsMBxHbK/31X7otjPoUsEcVz+4zoKW6HXad/rtDcEDo9WZ07CYnovftaiE9EExF+UwD1PKJmOyblcMn3wIliJFuW8/cRVOlZEDCeJLTo7sn1mg617eI+5qwucys5Xfwkp6HJSHCof57yS7IEvgjJ2ORzl1Xo0V2NleqEup7YHV7O+VQzwPQur5On2H3tqKvvHFjQsmvjvfgDwFXUDejWJfxIQMiZGjoxj+5FekFsOZPm/TmLehRb9zt6Qmy3i1JWLLXyHCSXjsPbrmk1Idoj3joxAKt8MOG4C77dJrUNisPNCPdw7awvGjbd2Dm2+gEV0q5dCgOzEPHuF37IZVHB6X0JK4jKqtuXtWF1vtxuC1GlAMo5wV3Iey7uSoWlPvk+gWsFlReb0Ikvp0DSXDs0jv2nKFwPDX4Kvz916khkxmgIQfRmjMP3RxB2JS/0mFdRayswy1SC3quJ2XI9oUV54oSpnjqbLNManAALmA/Avl1PWLnjkX6RTyJ3BL7NgbhTXqRtuc89z/5kIGQh78sWIH3wHgoSQlD9awUGuXQxJwlmy+j8YXzs4yP+OHz/s414yvHPDbqJOvDnuXBYJwOqk1qkOQ== douglas85rj@gmail.com"
+
+# OCI Always Free ARM capacity: 2 nodes x 2 OCPUs x 12 GB = 4 OCPUs/24 GB.
+node_count         = 2
+node_ocpus         = 2
+node_memory_in_gbs = 12

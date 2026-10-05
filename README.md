@@ -39,3 +39,21 @@ The Docker deployment is also triggered by pushing to `main` through the [Docker
 1. Builds a multi-stage Docker image for `linux/arm64` and pushes it to Docker Hub
 2. Updates the image tag in the Helm chart repo
 3. ArgoCD detects the change and auto-syncs the deployment to the cluster
+
+### Provisioning the free OCI cluster
+
+The Terraform stack in [`infra/terraform`](infra/terraform) creates the OKE
+cluster with two ARM `VM.Standard.A1.Flex` nodes (2 OCPUs and 12 GB each),
+installs Argo CD, and creates
+the root Application that syncs [`charts/dgsite`](charts/dgsite).
+
+1. Install Terraform, the OCI CLI, `kubectl`, and Helm.
+2. Authenticate the OCI CLI and provide the values documented in
+   [`infra/terraform/README.md`](infra/terraform/README.md).
+3. Run `terraform init`, `terraform plan`, and `terraform apply` from
+   `infra/terraform`.
+4. Configure the repository secrets `DOCKERHUB_USERNAME` and `DOCKERHUB_TOKEN`.
+
+The OCI Always Free quota is shared by the tenancy and capacity varies by
+region. The node image must be an ARM64 OKE image matching the selected
+Kubernetes version; Terraform cannot safely infer that image automatically.

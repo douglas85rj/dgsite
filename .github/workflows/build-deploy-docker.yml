@@ -1,0 +1,63 @@
+name: Build and deploy Docker image
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - "charts/dgsite/values.yaml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: docker-image
+  cancel-in-progress: true
+
+env:
+  IMAGE_NAME: docker.io/douglas85rj/dgsite
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: docker/setup-qemu-action@v3
+      - uses: docker/setup-buildx-action@v3
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          registry: docker.io
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Build and push ARM64 image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: Dockerfile
+          platforms: linux/arm64
+          push: true
+          build-args: |
+            DOCKER_IMAGE_TAG=sha-${{ github.sha }}
+          tags: ${{ env.IMAGE_NAME }}:sha-${{ github.sha }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Update GitOps image tag
+        uses: mikefarah/yq@v4.44.3
+        with:
+          cmd: yq -i '.image.repository = strenv(IMAGE_NAME) | .image.tag = strenv(IMAGE_TAG)' charts/dgsite/values.yaml
+        env:
+          IMAGE_NAME: ${{ env.IMAGE_NAME }}
+          IMAGE_TAG: sha-${{ github.sha }}
+
+      - name: Commit GitOps change
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add charts/dgsite/values.yaml
+          git diff --cached --quiet || git commit -m "chore: deploy image sha-${GITHUB_SHA::12} [skip ci]"
+          git push
