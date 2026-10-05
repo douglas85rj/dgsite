@@ -58,13 +58,13 @@ const LABELS = {
       'Personal portfolio site (Docusaurus/React) containerized and deployed on an always-free Oracle Cloud Kubernetes cluster. ' +
       'Infrastructure provisioned with Terraform, CI/CD via GitHub Actions, GitOps deployment through ArgoCD and Helm.',
     project1Link: 'Read about it here: ricardllop.com/docs/site-infrastructure',
-    project1Url: 'https://ricardllop.com/docs/site-infrastructure',
+    project1Url: '',
     project2Title: 'Docker Compose Homelab',
     project2Desc:
       'Self-hosted homelab on a mini PC managed with Docker Compose. Services include Immich (photo library), ' +
       'Jellyfin (media server), AdGuard Home (DNS & ad blocking), and Caddy as a reverse proxy with automatic TLS.',
     project2Link: 'Read about it here: ricardllop.com/blog/homelab',
-    project2Url: 'https://ricardllop.com/blog/homelab',
+    project2Url: '',
   },
   es: {
     about: 'SOBRE MÍ',
@@ -78,13 +78,13 @@ const LABELS = {
       'Sitio personal (Docusaurus/React) contenedorizado y desplegado en un clúster Kubernetes siempre gratuito de Oracle Cloud. ' +
       'Infraestructura aprovisionada con Terraform, CI/CD mediante GitHub Actions, despliegue GitOps con ArgoCD y Helm.',
     project1Link: 'Leer más: ricardllop.com/es/docs/site-infrastructure',
-    project1Url: 'https://ricardllop.com/es/docs/site-infrastructure',
+    project1Url: '',
     project2Title: 'Homelab con Docker Compose',
     project2Desc:
       'Homelab autoalojado en un mini PC gestionado con Docker Compose. Servicios: Immich (biblioteca de fotos), ' +
       'Jellyfin (servidor multimedia), AdGuard Home (DNS y bloqueo de anuncios), y Caddy como proxy inverso con TLS automático.',
     project2Link: 'Leer más: ricardllop.com/es/blog/homelab',
-    project2Url: 'https://ricardllop.com/es/blog/homelab',
+    project2Url: '',
   },
   'pt-BR': {
     about: 'SOBRE',

@@ -203,28 +203,7 @@
         "Gestão de contratos de TI."
       ]
     },
-    {
-      "type": "work",
-      "date": "Jun. 2007 - Jan. 2008",
-      "date_es": "Jun. 2007 - Ene. 2008",
-      "date_pt": "Jun. 2007 - Jan. 2008",
-      "title": "IT Technician",
-      "title_es": "Técnico de TI",
-      "title_pt": "Técnico de TI",
-      "subtitle": "Investiplan Computadores e Refrigeração Ltda.",
-      "description": [
-        "Installation, configuration, and administration of Windows Server environments.",
-        "End-user support for Windows, Office, and printers."
-      ],
-      "description_es": [
-        "Instalación, configuración y administración de entornos Windows Server.",
-        "Soporte a usuarios finales para Windows, Office e impresoras."
-      ],
-      "description_pt": [
-        "Instalação, configuração e administração de ambientes Windows Server.",
-        "Suporte a usuários finais para Windows, Office e impressoras."
-      ]
-    },
+    
     {
       "type": "education",
       "date": "2022 - 2023",

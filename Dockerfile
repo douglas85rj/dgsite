@@ -1,6 +1,6 @@
 FROM --platform=linux/arm64 node:alpine as builder
 
-ARG DOCUSAURUS_CONF_URL='https://ricardllop.com'
+ARG DOCUSAURUS_CONF_URL='https://raw.githubusercontent.com/douglas85rj/dgsite/main/docusaurus.config.js'
 ARG DOCKER_IMAGE_TAG='ga-tag'
 
 COPY . .
