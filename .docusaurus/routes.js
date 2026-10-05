@@ -3,115 +3,80 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 
 export default [
   {
-    path: '/__docusaurus/debug',
-    component: ComponentCreator('/__docusaurus/debug', '5ff'),
+    path: '/es/blog',
+    component: ComponentCreator('/es/blog', 'ca5'),
     exact: true
   },
   {
-    path: '/__docusaurus/debug/config',
-    component: ComponentCreator('/__docusaurus/debug/config', '5ba'),
+    path: '/es/blog/archive',
+    component: ComponentCreator('/es/blog/archive', 'c1d'),
     exact: true
   },
   {
-    path: '/__docusaurus/debug/content',
-    component: ComponentCreator('/__docusaurus/debug/content', 'a2b'),
+    path: '/es/blog/authors',
+    component: ComponentCreator('/es/blog/authors', 'e39'),
     exact: true
   },
   {
-    path: '/__docusaurus/debug/globalData',
-    component: ComponentCreator('/__docusaurus/debug/globalData', 'c3c'),
+    path: '/es/blog/homelab',
+    component: ComponentCreator('/es/blog/homelab', '294'),
     exact: true
   },
   {
-    path: '/__docusaurus/debug/metadata',
-    component: ComponentCreator('/__docusaurus/debug/metadata', '156'),
+    path: '/es/blog/tags',
+    component: ComponentCreator('/es/blog/tags', 'b1d'),
     exact: true
   },
   {
-    path: '/__docusaurus/debug/registry',
-    component: ComponentCreator('/__docusaurus/debug/registry', '88c'),
+    path: '/es/blog/tags/adguard',
+    component: ComponentCreator('/es/blog/tags/adguard', '044'),
     exact: true
   },
   {
-    path: '/__docusaurus/debug/routes',
-    component: ComponentCreator('/__docusaurus/debug/routes', '000'),
+    path: '/es/blog/tags/caddy',
+    component: ComponentCreator('/es/blog/tags/caddy', 'e3e'),
     exact: true
   },
   {
-    path: '/blog',
-    component: ComponentCreator('/blog', '181'),
+    path: '/es/blog/tags/dev-ops',
+    component: ComponentCreator('/es/blog/tags/dev-ops', 'ac7'),
     exact: true
   },
   {
-    path: '/blog/archive',
-    component: ComponentCreator('/blog/archive', '182'),
+    path: '/es/blog/tags/docker',
+    component: ComponentCreator('/es/blog/tags/docker', '7ce'),
     exact: true
   },
   {
-    path: '/blog/authors',
-    component: ComponentCreator('/blog/authors', '0b7'),
+    path: '/es/blog/tags/homelab',
+    component: ComponentCreator('/es/blog/tags/homelab', 'db8'),
     exact: true
   },
   {
-    path: '/blog/homelab',
-    component: ComponentCreator('/blog/homelab', 'b93'),
+    path: '/es/blog/tags/immich',
+    component: ComponentCreator('/es/blog/tags/immich', '057'),
     exact: true
   },
   {
-    path: '/blog/tags',
-    component: ComponentCreator('/blog/tags', '287'),
+    path: '/es/blog/tags/jellyfin',
+    component: ComponentCreator('/es/blog/tags/jellyfin', '863'),
     exact: true
   },
   {
-    path: '/blog/tags/adguard',
-    component: ComponentCreator('/blog/tags/adguard', 'c9e'),
-    exact: true
-  },
-  {
-    path: '/blog/tags/caddy',
-    component: ComponentCreator('/blog/tags/caddy', '3ad'),
-    exact: true
-  },
-  {
-    path: '/blog/tags/dev-ops',
-    component: ComponentCreator('/blog/tags/dev-ops', 'd92'),
-    exact: true
-  },
-  {
-    path: '/blog/tags/docker',
-    component: ComponentCreator('/blog/tags/docker', 'a6f'),
-    exact: true
-  },
-  {
-    path: '/blog/tags/homelab',
-    component: ComponentCreator('/blog/tags/homelab', '709'),
-    exact: true
-  },
-  {
-    path: '/blog/tags/immich',
-    component: ComponentCreator('/blog/tags/immich', 'dec'),
-    exact: true
-  },
-  {
-    path: '/blog/tags/jellyfin',
-    component: ComponentCreator('/blog/tags/jellyfin', '0a0'),
-    exact: true
-  },
-  {
-    path: '/docs',
-    component: ComponentCreator('/docs', 'c14'),
+    path: '/es/docs',
+    component: ComponentCreator('/es/docs', 'c17'),
     routes: [
       {
-        path: '/docs',
-        component: ComponentCreator('/docs', '597'),
+        path: '/es/docs',
+        component: ComponentCreator('/es/docs', 'e6d'),
         routes: [
           {
-            path: '/docs',
-            component: ComponentCreator('/docs', '685'),
+            path: '/es/docs',
+            component: ComponentCreator('/es/docs', 'ce1'),
             routes: [
               {
-                path: '/docs/site-infrastructure',
-                component: ComponentCreator('/docs/site-infrastructure', '413'),
+                path: '/es/docs/site-infrastructure',
+                component: ComponentCreator('/es/docs/site-infrastructure', '4ad'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               }
@@ -122,8 +87,8 @@ export default [
     ]
   },
   {
-    path: '/',
-    component: ComponentCreator('/', '2e1'),
+    path: '/es/',
+    component: ComponentCreator('/es/', '124'),
     exact: true
   },
   {

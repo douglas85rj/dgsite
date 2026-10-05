@@ -1,0 +1,74 @@
+{
+  "permalink": "/es/blog/homelab",
+  "editUrl": "https://github.com/douglas85rj/dgsite/blog/01-homelab.md",
+  "source": "@site/i18n/es/docusaurus-plugin-content-blog/01-homelab.md",
+  "title": "Homelab con Docker Compose",
+  "description": "Este artículo trata sobre un homelab autoalojado que corre en un mini PC dedicado en una red doméstica, gestionado íntegramente con Docker Compose. La configuración proporciona gestión de fotos, streaming de medios, bloqueo de anuncios a nivel de red, proxy inverso con TLS automático y DNS dinámico — todo accesible desde cualquier lugar mediante un dominio público, o localmente mediante hostnames .local.",
+  "date": "2026-10-05T13:20:44.000Z",
+  "tags": [
+    {
+      "inline": true,
+      "label": "DevOps",
+      "permalink": "/es/blog/tags/dev-ops"
+    },
+    {
+      "inline": true,
+      "label": "Homelab",
+      "permalink": "/es/blog/tags/homelab"
+    },
+    {
+      "inline": true,
+      "label": "Docker",
+      "permalink": "/es/blog/tags/docker"
+    },
+    {
+      "inline": true,
+      "label": "Caddy",
+      "permalink": "/es/blog/tags/caddy"
+    },
+    {
+      "inline": true,
+      "label": "Immich",
+      "permalink": "/es/blog/tags/immich"
+    },
+    {
+      "inline": true,
+      "label": "Adguard",
+      "permalink": "/es/blog/tags/adguard"
+    },
+    {
+      "inline": true,
+      "label": "Jellyfin",
+      "permalink": "/es/blog/tags/jellyfin"
+    }
+  ],
+  "readingTime": 4.77,
+  "hasTruncateMarker": false,
+  "authors": [
+    {
+      "name": "Douglas Souza",
+      "title": "Infrastructure Engineer",
+      "url": "https://github.com/douglas85rj",
+      "imageURL": "https://github.com/douglas85rj.png",
+      "key": "rllop",
+      "page": null
+    }
+  ],
+  "frontMatter": {
+    "slug": "homelab",
+    "title": "Homelab con Docker Compose",
+    "authors": [
+      "rllop"
+    ],
+    "tags": [
+      "DevOps",
+      "Homelab",
+      "Docker",
+      "Caddy",
+      "Immich",
+      "Adguard",
+      "Jellyfin"
+    ]
+  },
+  "unlisted": false
+}

@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkdgsite=globalThis.webpackChunkdgsite||[]).push([[472],{5513(e){e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Homelab con Docker Compose","permalink":"/es/blog/homelab","unlisted":false,"date":"2026-10-05T13:20:44.000Z"}]}')}}]);
