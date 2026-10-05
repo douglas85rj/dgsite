@@ -1,6 +1,7 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 const dockerImageTag = process.env.DOCKER_IMAGE_TAG || 'latest';
 const urlvar = process.env.DOCUSAURUS_CONF_URL || 'http://localhost:80';
+const baseUrlVar = process.env.DOCUSAURUS_BASE_URL || '/';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Douglas',
@@ -9,7 +10,7 @@ const config = {
 
   // TO DO Set the production url of your site here
   url: urlvar,
-  baseUrl: '/',
+  baseUrl: baseUrlVar,
   organizationName: 'dgsouza',
   projectName: 'dgsite',
 
