@@ -2,6 +2,7 @@
   "name": "Douglas",
   "lastName": "Souza",
   "title": "Infrastructure Solutions Analyst  - DevOps / Cloud Engineer",
+  "title_pt": "Analista de Soluções de Infraestrutura - Engenheiro DevOps / Cloud",
   "careerStartYear": 2007,
   "contact": {
     "email": "douglas85rj@gmail.com",
@@ -41,6 +42,11 @@
     "foco en CI/CD,  imágenes Docker. Especializado en CD GitOps usando Helm y ArgoCD.",
     "Triple certificado (AWS Cloud Practitioner, GitHub Foundations, Microsoft Certified: Azure Fundamentals) con experiencia multisectorial en: videojuegos, servicios financieros y consultoría cloud. Gran foco en fiabilidad, optimización de costes y velocidad de desarrollo."
   ],
+  "description_pt": [
+    "Analista de Infraestrutura e engenheiro DevOps com mais de {yearsExp} anos de experiência, especializado em Infraestrutura como Código e com forte conhecimento em AWS e Kubernetes para construir plataformas escaláveis, seguras e confiáveis.",
+    "Foco em CI/CD e na criação de imagens Docker. Experiência com CD GitOps usando Helm e ArgoCD.",
+    "Triplamente certificado (AWS Cloud Practitioner, GitHub Foundations e Microsoft Certified: Azure Fundamentals), com experiência em diferentes setores: jogos, serviços financeiros e consultoria em cloud. Forte foco em confiabilidade, otimização de custos e produtividade de desenvolvimento."
+  ],
   "profileImage": {
     "src": "img/sitelogo.png",
     "alt": "Photo of me (Douglas)"
@@ -53,6 +59,7 @@
       "type": "work",
       "date": "Feb. 2025 - Present",
       "date_es": "Feb. 2025 - Actualidad",
+      "date_pt": "Fev. 2025 - Atualmente",
       "title": "Infrastructure Solutions Analyst",
       "subtitle": "Hitss Brazil",
       "description": [
@@ -68,14 +75,26 @@
         "- CI stack: Jenkins, Unity build Mac agents (Ansible managed), BuildKit (Docker), Trivy, GitLab.",
         "Implementación y mantenimiento de un ecosistema CD basado en GitOps para aplicaciones de servidor.",
         "- CD stack: ArgoCD, Helm, Kubernetes."
+      ],
+      "description_pt": [
+        "Opero e evoluo uma plataforma cloud baseada em Kubernetes na AWS, totalmente gerenciada por Infraestrutura como Código, dando suporte a várias equipes de desenvolvimento de jogos mobile com uma plataforma escalável, resiliente e self-service.",
+        "- Platform stack: Terraform, Terragrunt, AWS EKS, Istio, Vault + External Secrets, External DNS, Atlantis, Atlas MongoDB, Grafana Loki, Opentelemetry, Kafka",
+        "Monitoro a plataforma, investigo e resolvo incidentes críticos, contribuindo para manter a confiabilidade dos serviços e minimizar interrupções para as equipes de desenvolvimento.",
+        "Desenvolvo scripts e automatizo processos operacionais para padronizar tarefas recorrentes, aumentar a eficiência e reduzir a intervenção manual.",
+        "Projeto, mantenho e melhoro o ecossistema de CI/Build de ponta a ponta para clientes de jogos Unity Mobile e imagens de contêineres Java backend.",
+        "- CI stack: Jenkins, agentes Mac para builds Unity gerenciados com Ansible, BuildKit (Docker), Trivy, GitLab.",
+        "Implemento e mantenho um ecossistema de CD baseado em GitOps para aplicações de servidor.",
+        "- CD stack: ArgoCD, Helm, Kubernetes."
       ]
     },
     {
       "type": "work",
       "date": "Apr. 2024 - Jan. 2025",
       "date_es": "Abr. 2024 - Ene. 2025",
+      "date_pt": "Abr. 2024 - Jan. 2025",
       "title": "Infrastructure Analyst",
       "title_es": "Analista de infraestructura",
+      "title_pt": "Analista de infraestrutura",
       "subtitle": "T.O. Brasil",
       "description": [
         "Worked as an Infrastructure Analyst in Rio de Janeiro, Brazil.",
@@ -84,14 +103,20 @@
       "description_es": [
         "Trabajó como Analista de infraestructura en Río de Janeiro, Brasil.",
         "- Platform stack: Grafana, SQL, Monitoring, GCP, AWS, Oracle"
+      ],
+      "description_pt": [
+        "Atuei como Analista de infraestrutura no Rio de Janeiro, Brasil.",
+        "- Platform stack: Grafana, SQL, Monitoring, GCP, AWS, Oracle"
       ]
     },
     {
       "type": "work",
       "date": "Mar. 2023 - Apr. 2024",
       "date_es": "Mar. 2023 - Abr. 2024",
+      "date_pt": "Mar. 2023 - Abr. 2024",
       "title": "Full Stack Developer",
       "title_es": "Desarrollador Full Stack",
+      "title_pt": "Desenvolvedor Full Stack",
       "subtitle": "CAEFE - Caixa de Assistência dos Empregados de Furnas e Eletronuclear",
       "description": [
         "Worked as a Full Stack Developer in Rio de Janeiro, Brazil.",
@@ -100,14 +125,20 @@
       "description_es": [
         "Trabajó como Desarrollador Full Stack en Río de Janeiro, Brasil.",
         "- Platform stack: React, Java, SQL, Linux, JavaScript, Node.js"
+      ],
+      "description_pt": [
+        "Atuei como Desenvolvedor Full Stack no Rio de Janeiro, Brasil.",
+        "- Platform stack: React, Java, SQL, Linux, JavaScript, Node.js"
       ]
     },
     {
       "type": "work",
       "date": "Aug. 2013 - Apr. 2023",
       "date_es": "Ago. 2013 - Abr. 2023",
+      "date_pt": "Ago. 2013 - Abr. 2023",
       "title": "Systems Analyst",
       "title_es": "Analista de sistemas",
+      "title_pt": "Analista de sistemas",
       "subtitle": "CAEFE - Caixa de Assistência dos Empregados de Furnas e Eletronuclear",
       "description": [
         "Worked as a Systems Analyst in Rio de Janeiro, Brazil.",
@@ -116,14 +147,20 @@
       "description_es": [
         "Trabajó como Analista de sistemas en Río de Janeiro, Brasil.",
         "- Platform stack: React, Java, SQL, Linux, JavaScript, Node.js"
+      ],
+      "description_pt": [
+        "Atuei como Analista de sistemas no Rio de Janeiro, Brasil.",
+        "- Platform stack: React, Java, SQL, Linux, JavaScript, Node.js"
       ]
     },
     {
       "type": "work",
       "date": "Feb. 2011 - Aug. 2012",
       "date_es": "Feb. 2011 - Ago. 2012",
+      "date_pt": "Fev. 2011 - Ago. 2012",
       "title": "IT Analyst",
       "title_es": "Analista de TI",
+      "title_pt": "Analista de TI",
       "subtitle": "Quality S.A.",
       "description": [
         "Worked as an IT Analyst in Rio de Janeiro, Brazil.",
@@ -134,14 +171,21 @@
         "Trabajó como Analista de TI en Río de Janeiro, Brasil.",
         "- Platform stack: Linux, Windows Server, pfSense, GLPI, Zabbix",
         "Responsable de toda la infraestructura, incluyendo la configuración y gestión del firewall, la administración de Active Directory y la creación de políticas de backup."
+      ],
+      "description_pt": [
+        "Atuei como Analista de TI no Rio de Janeiro, Brasil.",
+        "- Platform stack: Linux, Windows Server, pfSense, GLPI, Zabbix",
+        "Responsável por toda a infraestrutura, incluindo configuração e gerenciamento de firewall, administração do Active Directory e criação de políticas de backup."
       ]
     },
     {
       "type": "work",
       "date": "Jan. 2008 - Jan. 2011",
       "date_es": "Ene. 2008 - Ene. 2011",
+      "date_pt": "Jan. 2008 - Jan. 2011",
       "title": "IT Technician",
       "title_es": "Técnico de TI",
+      "title_pt": "Técnico de TI",
       "subtitle": "Rioprevidência",
       "description": [
         "Help desk support.",
@@ -152,14 +196,21 @@
         "Soporte de help desk.",
         "Administración de servidores Windows y Linux.",
         "Gestión de contratos de TI."
+      ],
+      "description_pt": [
+        "Suporte de help desk.",
+        "Administração de servidores Windows e Linux.",
+        "Gestão de contratos de TI."
       ]
     },
     {
       "type": "work",
       "date": "Jun. 2007 - Jan. 2008",
       "date_es": "Jun. 2007 - Ene. 2008",
+      "date_pt": "Jun. 2007 - Jan. 2008",
       "title": "IT Technician",
       "title_es": "Técnico de TI",
+      "title_pt": "Técnico de TI",
       "subtitle": "Investiplan Computadores e Refrigeração Ltda.",
       "description": [
         "Installation, configuration, and administration of Windows Server environments.",
@@ -168,6 +219,10 @@
       "description_es": [
         "Instalación, configuración y administración de entornos Windows Server.",
         "Soporte a usuarios finales para Windows, Office e impresoras."
+      ],
+      "description_pt": [
+        "Instalação, configuração e administração de ambientes Windows Server.",
+        "Suporte a usuários finais para Windows, Office e impressoras."
       ]
     },
     {

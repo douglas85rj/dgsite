@@ -33,6 +33,21 @@ const COPY = {
     infrastructure: 'Este portfolio es un sitio Docusaurus construido con React, contenerizado con Docker y documentado con una guía de infraestructura. El despliegue utiliza prácticas de CI/CD y GitOps.',
     contact: 'Puedes contactar con Douglas a través de LinkedIn o del correo electrónico indicado en el perfil.',
   },
+  'pt-BR': {
+    assistant: 'Ask Douglas',
+    greeting: 'Olá! Posso contar sobre a experiência, as habilidades, as certificações e os projetos do Douglas.',
+    placeholder: 'Pergunte sobre o Douglas...',
+    open: 'Abrir Ask Douglas',
+    close: 'Fechar Ask Douglas',
+    send: 'Enviar mensagem',
+    suggestions: ['Experiência', 'Habilidades técnicas', 'Certificações', 'Infraestrutura do site'],
+    unavailable: 'Posso responder perguntas sobre o perfil profissional, a stack tecnológica, as certificações e este portfólio. Tente uma das sugestões abaixo.',
+    experience: 'Douglas tem experiência em infraestrutura, DevOps, cloud, desenvolvimento de software e operações de TI:',
+    skills: 'Douglas trabalha com AWS, Kubernetes, Terraform, Docker, GitOps, ArgoCD, Helm, Linux, Java, React, Node.js, SQL e ferramentas de monitoramento.',
+    certifications: 'Douglas possui as certificações AWS Cloud Practitioner, GitHub Foundations e Microsoft Certified: Azure Fundamentals.',
+    infrastructure: 'Este portfólio é um site Docusaurus construído com React, conteinerizado com Docker e documentado com um guia de infraestrutura. A implantação utiliza práticas de CI/CD e GitOps.',
+    contact: 'Você pode entrar em contato com Douglas pelo LinkedIn ou pelo e-mail indicado no perfil.',
+  },
 };
 
 function getResponse(question, locale, copy) {
@@ -42,16 +57,16 @@ function getResponse(question, locale, copy) {
     .map((experience) => `${experience.title} — ${experience.subtitle} (${experience.date})`)
     .join('\n');
 
-  if (/experience|experienc|experiencia|career|trabaj|histórico|historial/.test(normalized)) {
+  if (/experience|experienc|experiencia|experiên|career|trabaj|trabalh|histórico|historial/.test(normalized)) {
     return `${copy.experience}\n${experiences}`;
   }
-  if (/skill|stack|technology|technolog|habilidad|tecnolog|conocim/.test(normalized)) {
+  if (/skill|stack|technology|technolog|habilidad|tecnolog|conocim|habilidade/.test(normalized)) {
     return copy.skills;
   }
   if (/certif|badge|credencial/.test(normalized)) {
     return copy.certifications;
   }
-  if (/infrastructure|arquitect|site|website|hosting|infraestructura|sitio|web/.test(normalized)) {
+  if (/infrastructure|arquitect|site|website|hosting|infraestructura|infraestrutura|sitio|web/.test(normalized)) {
     return copy.infrastructure;
   }
   if (/contact|linkedin|email|mail|contato|contacto/.test(normalized)) {

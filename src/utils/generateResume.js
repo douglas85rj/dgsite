@@ -38,10 +38,11 @@ function lh(sizePt) {
 
 // ── Localisation ──────────────────────────────────────────────────────
 
-/** Returns the _es variant of obj[key] when locale is 'es', falls back to obj[key]. */
+/** Returns the locale variant of obj[key], falling back to obj[key]. */
 function loc(locale, obj, key) {
-  const esKey = `${key}_es`;
-  return locale === 'es' && obj[esKey] ? obj[esKey] : obj[key];
+  const suffix = locale === 'es' ? '_es' : locale === 'pt-BR' ? '_pt' : '';
+  const localizedKey = `${key}${suffix}`;
+  return obj[localizedKey] || obj[key];
 }
 
 const LABELS = {
@@ -84,6 +85,26 @@ const LABELS = {
       'Jellyfin (servidor multimedia), AdGuard Home (DNS y bloqueo de anuncios), y Caddy como proxy inverso con TLS automático.',
     project2Link: 'Leer más: ricardllop.com/es/blog/homelab',
     project2Url: 'https://ricardllop.com/es/blog/homelab',
+  },
+  'pt-BR': {
+    about: 'SOBRE',
+    certifications: 'CERTIFICAÇÕES',
+    skills: 'HABILIDADES',
+    experience: 'EXPERIÊNCIA',
+    projects: 'PROJETOS PESSOAIS',
+    education: 'FORMAÇÃO',
+    project1Title: 'Cluster Kubernetes gratuito na Oracle Cloud e hospedagem com CI/CD',
+    project1Desc:
+      'Site pessoal (Docusaurus/React) conteinerizado e implantado em um cluster Kubernetes gratuito da Oracle Cloud. ' +
+      'Infraestrutura provisionada com Terraform, CI/CD via GitHub Actions e implantação GitOps com ArgoCD e Helm.',
+    project1Link: 'Leia sobre isso: ricardllop.com/docs/site-infrastructure',
+    project1Url: 'https://ricardllop.com/pt-BR/docs/site-infrastructure',
+    project2Title: 'Homelab com Docker Compose',
+    project2Desc:
+      'Homelab hospedado em um mini PC e gerenciado com Docker Compose. Os serviços incluem Immich, ' +
+      'Jellyfin, AdGuard Home e Caddy como proxy reverso com TLS automático.',
+    project2Link: 'Leia sobre isso: ricardllop.com/blog/homelab',
+    project2Url: 'https://ricardllop.com/pt-BR/blog/homelab',
   },
 };
 
@@ -231,7 +252,7 @@ export async function downloadResume(locale = 'en') {
   doc.setFont('helvetica', 'bold');
   doc.setFontSize(9);
   doc.setTextColor(...LIGHT_BLUE);
-  doc.text(profileData.title, MARGIN + 5, 26);
+  doc.text(loc(locale, profileData, 'title'), MARGIN + 5, 26);
 
   // Separator (stops before the photo)
   doc.setDrawColor(...DARK_BLUE);

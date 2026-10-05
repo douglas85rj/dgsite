@@ -10,7 +10,7 @@ const config = {
   // TO DO Set the production url of your site here
   url: urlvar,
   baseUrl: '/',
-  organizationName: 'ricardllop',
+  organizationName: 'dgsouza',
   projectName: 'dgsite',
 
   onBrokenLinks: 'throw',
@@ -18,10 +18,11 @@ const config = {
 
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'es'],
+    locales: ['en', 'es', 'pt-BR'],
     localeConfigs: {
       en: { label: 'English' },
       es: { label: 'Español' },
+      'pt-BR': { label: 'Português (Brasil)' },
     },
   },
 
@@ -33,12 +34,12 @@ const config = {
         docs: {
           sidebarPath: './sidebars.js',
           editUrl:
-            'https://github.com/ricardllop/dgsite',
+            'https://github.com/douglas85rj/dgsite',
         },
         blog: {
           showReadingTime: true,
           editUrl:
-            'https://github.com/ricardllop/dgsite',
+            'https://github.com/douglas85rj/dgsite',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -69,7 +70,7 @@ const config = {
           },
           {to: '/blog', label: 'Portfolio', position: 'left'},
           {
-            href: 'https://github.com/ricardllop',
+            href: 'https://github.com/douglas85rj',
             label: 'GitHub',
             position: 'right',
           },
@@ -100,11 +101,11 @@ const config = {
             items: [
               {
                 label: 'Linkedin',
-                href: 'https://www.linkedin.com/in/ricard-llop-palou-devops/',
+                href: 'https://www.linkedin.com/in/douglas-monteiro-de-souza/',
               },
               {
                 label: 'Mail',
-                href: 'mailto:ricardlloppalou@gmail.com',
+                href: 'mailto:douglas85rj@gmail.com',
               },
             ],
           },
@@ -113,16 +114,16 @@ const config = {
             items: [
               {
                 label: 'Site Docker Image',
-                href: 'https://hub.docker.com/r/rllopdev/dgsite/tags',
+                /*href: 'https://hub.docker.com/r/rllopdev/dgsite/tags',*/
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/ricardllop',
+                href: 'https://github.com/douglas85rj',
               },
             ],
           },
         ],
-        copyright: `Docker Image Tag: ${dockerImageTag} - Copyright © ${new Date().getFullYear()} RLlopSite, Inc. Built with React.`,
+        copyright: `Docker Image Tag: ${dockerImageTag} - Copyright © ${new Date().getFullYear()} dgsite, Inc. Built with React.`,
       },
       prism: {
         theme: prismThemes.github,

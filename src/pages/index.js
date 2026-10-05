@@ -11,10 +11,11 @@ import 'react-vertical-timeline-component/style.min.css';
 const yearsExp = new Date().getFullYear() - profileData.careerStartYear;
 const resolveText = (text) => text.replace('{yearsExp}', yearsExp);
 
-// Returns the _es variant of a field when locale is 'es', falls back to base field
+// Returns the locale variant of a field, falling back to the base field.
 const loc = (locale, obj, key) => {
-  const esKey = `${key}_es`;
-  return locale === 'es' && obj[esKey] ? obj[esKey] : obj[key];
+  const suffix = locale === 'es' ? '_es' : locale === 'pt-BR' ? '_pt' : '';
+  const localizedKey = `${key}${suffix}`;
+  return obj[localizedKey] || obj[key];
 };
 
 const UI = {
@@ -32,6 +33,13 @@ const UI = {
     exploreArch: 'Explorar la arquitectura',
     experience: 'Experiencia',
   },
+  'pt-BR': {
+    greeting: (name) => `Olá, eu sou ${name}`,
+    downloadResume: 'Baixar currículo',
+    terminalCmd: 'Clique para ver a infraestrutura e o CI/CD por trás deste site',
+    exploreArch: 'Explorar a arquitetura',
+    experience: 'Experiência',
+  },
 };
 
 function HomepageHeader({ locale }) {
@@ -44,7 +52,7 @@ function HomepageHeader({ locale }) {
           <div className={clsx('col', styles.heroContent)}>
             <div className="descriptiontext">
               <h2 className={styles.nameHeading}>{ui.greeting(profileData.name)}</h2>
-              <h1 className={styles.roleTitle}>{profileData.title}</h1>
+              <h1 className={styles.roleTitle}>{loc(locale, profileData, 'title')}</h1>
               {description.map((paragraph, index) => (
                 <p key={index} className={index < description.length - 1 ? 'pmid' : ''}>
                   {resolveText(paragraph)}

@@ -1,0 +1,18 @@
+{
+  "title": {
+    "message": "Eu",
+    "description": "The title in the navbar"
+  },
+  "item.label.Infrastructure behind this site": {
+    "message": "Infraestrutura por trás deste site",
+    "description": "Navbar item with label Infrastructure behind this site"
+  },
+  "item.label.Portfolio": {
+    "message": "Portfólio",
+    "description": "Navbar item with label Portfolio"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  }
+}
