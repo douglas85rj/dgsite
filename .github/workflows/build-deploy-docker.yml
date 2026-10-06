@@ -26,12 +26,26 @@ jobs:
       - uses: docker/setup-qemu-action@v3
       - uses: docker/setup-buildx-action@v3
 
+      - name: Check Docker Hub credentials
+        id: dockerhub
+        env:
+          DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME || vars.DOCKERHUB_USERNAME }}
+          DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN || secrets.DOCKERHUB_PASSWORD }}
+        run: |
+          if [ -n "${DOCKERHUB_USERNAME}" ] && [ -n "${DOCKERHUB_TOKEN}" ]; then
+            echo "configured=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "configured=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::Docker Hub credentials are not configured. Building image without push."
+          fi
+
       - name: Log in to Docker Hub
+        if: steps.dockerhub.outputs.configured == 'true'
         uses: docker/login-action@v3
         with:
           registry: docker.io
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          username: ${{ secrets.DOCKERHUB_USERNAME || vars.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN || secrets.DOCKERHUB_PASSWORD }}
 
       - name: Build and push ARM64 image
         uses: docker/build-push-action@v6
@@ -39,7 +53,7 @@ jobs:
           context: .
           file: Dockerfile
           platforms: linux/arm64
-          push: true
+          push: ${{ steps.dockerhub.outputs.configured == 'true' }}
           build-args: |
             DOCKER_IMAGE_TAG=sha-${{ github.sha }}
           tags: ${{ env.IMAGE_NAME }}:sha-${{ github.sha }}
@@ -47,6 +61,7 @@ jobs:
           cache-to: type=gha,mode=max
 
       - name: Update GitOps image tag
+        if: steps.dockerhub.outputs.configured == 'true'
         uses: mikefarah/yq@v4.44.3
         with:
           cmd: yq -i '.image.repository = strenv(IMAGE_NAME) | .image.tag = strenv(IMAGE_TAG)' charts/dgsite/values.yaml
@@ -55,6 +70,7 @@ jobs:
           IMAGE_TAG: sha-${{ github.sha }}
 
       - name: Commit GitOps change
+        if: steps.dockerhub.outputs.configured == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
