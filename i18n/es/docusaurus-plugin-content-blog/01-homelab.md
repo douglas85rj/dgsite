@@ -9,6 +9,8 @@ tags: [DevOps, Homelab, Docker, Caddy, Immich, Adguard, Jellyfin]
 
 Este artículo trata sobre un homelab autoalojado que corre en un mini PC dedicado en una red doméstica, gestionado íntegramente con Docker Compose. La configuración proporciona gestión de fotos, streaming de medios, bloqueo de anuncios a nivel de red, proxy inverso con TLS automático y DNS dinámico — todo accesible desde cualquier lugar mediante un dominio público, o localmente mediante hostnames `.local`.
 
+<!-- truncate -->
+
 ## Arquitectura de red
 
 El router solo redirige los puertos **80** y **443** hacia el mini PC. Todo el tráfico público y local entra a través de **Caddy**, que termina TLS y enruta las peticiones al servicio correspondiente. Los servicios internos se comunican a través de una red bridge Docker compartida (`homelab`) y nunca son directamente accesibles desde el exterior.

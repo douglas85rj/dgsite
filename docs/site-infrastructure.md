@@ -3,75 +3,196 @@ sidebar_position: 1
 ---
 # Infrastructure behind this site
 
-## Introduction
+## Overview
 
-I'm not primarily a frontend developer, so this website isn't the most impressive. Its purpose is to serve as a personal CV and a space to document my personal DevOps projects. The site is created using [Docusaurus](https://docusaurus.io/), which allows ease of use to document projects and future endeavors using markdown.
+This site is a Docusaurus static site backed by a GitOps deployment pipeline.
+The intended production platform is an Oracle Kubernetes Engine (OKE) cluster
+managed with Terraform, Argo CD, and Helm.
 
-What is perhaps more interesting is the **site's hosting and CI/CD pipeline setup**, though admittedly overkill for a static site. This was a practice project and a showcase of my skills. This document will explore this setup in detail.
+The infrastructure code is kept in this repository:
 
-The setup includes an **always free Kubernetes cluster** using [Oracle Cloud](https://www.oracle.com/es/cloud/), **Containerization** of the website, **CI/CD using GitHub Actions**, **CD using [ArgoCD](https://argo-cd.readthedocs.io/en/stable/)** and **Helm**. So keep reading if you are interested.
+- [`infra/terraform`](https://github.com/douglas85rj/dgsite/tree/main/infra/terraform)
+  provisions the OCI network and OKE resources.
+- [`infra/bootstrap`](https://github.com/douglas85rj/dgsite/tree/main/infra/bootstrap)
+  installs Argo CD and creates the GitOps application.
+- [`charts/dgsite`](https://github.com/douglas85rj/dgsite/tree/main/charts/dgsite)
+  contains the Helm chart for the site.
+- [`.github/workflows/build-deploy-docker.yml`](https://github.com/douglas85rj/dgsite/blob/main/.github/workflows/build-deploy-docker.yml)
+  builds the ARM64 image and updates the GitOps image tag.
 
-![Schema](/img/dgsite-schema.png)
 
-## The webpage
+![Infrastructure schema](/img/dgsite-schema.png)
 
-The site's code is stored in this [Github repository,](https://github.com/douglas85rj/dgsite) it is created using [Docusaurus](https://docusaurus.io/docs), a React-based static-site generator for fast, interactive sites, ideal for documentation, blogs, or personal projects.
+## OCI network and OKE resources
 
-## The Kubernetes cluster
+Terraform creates the following resources in the root compartment of the
+tenancy:
 
-The Kubernetes cluster is hosted on [Oracle Cloud](https://www.oracle.com/es/cloud/), and it is declared using Terraform, the code is public in this [Github repository](https://github.com/douglas85rj/dgsite).
+- One VCN with CIDR `10.0.0.0/16`
+- One public subnet with CIDR `10.0.10.0/24`
+- One private subnet with CIDR `10.0.20.0/24`
+- One Internet Gateway for public traffic
+- One NAT Gateway for private-subnet egress
+- Public and private route tables
+- Public and private security lists
+- One OKE **enhanced cluster**
+- One node pool using the ARM shape `VM.Standard.A1.Flex`
 
-The Terraform code in [`infra/terraform`](https://github.com/douglas85rj/dgsite/tree/main/infra/terraform) declares the necessary infrastructure resources on Oracle Cloud (only **Always Free** shapes). It creates:
+The OKE API endpoint is public and is placed in the public subnet. Worker
+nodes are configured for the private subnet, without public IP addresses.
+Service load balancers use the public subnet.
 
-- 1 VCN
-- 2 subnets (1 public, 1 private)
-- 1 OKE (Oracle) Kubernetes cluster
-- 1 node pool with 2 instances of VM.Standard.A1.Flex, 2 OCPUs and 12 GB each (4 OCPUs and 24 GB total), consuming the [Always Free compute limit of Oracle Cloud](https://docs.oracle.com/en-us/iaas/Content/FreeTier/freetier_topic-Always_Free_Resources.htm#compute).
+The node pool uses `node_config_details` and explicit placement configurations,
+which is required by enhanced OKE clusters. The placements target the first
+availability domain and distribute nodes across fault domains when more than
+one node is requested.
 
-It also has a 2nd part to deploy [ArgoCD](https://argo-cd.readthedocs.io/en/stable/) using Terraform. ArgoCD along with the [app of apps pattern](https://argo-cd.readthedocs.io/en/stable/operator-manual/cluster-bootstrapping/#app-of-apps-pattern) are then used to deploy the rest of needed resources to the Kubernetes cluster.
+The worker image is an Oracle Linux ARM64 OKE image matching Kubernetes
+`v1.36.4`. The original target was two Always Free nodes, each with 2 OCPUs
+and 12 GB of memory, which uses the Oracle Always Free allowance:
 
-The [README.md](https://github.com/ricardllop/tf-oci-cluster-infra/blob/main/README.md) has much more detailed information on how to set it up if you want to replicate this.
+- 2 nodes
+- 4 OCPUs total
+- 24 GB of memory total
 
-## Helm charts & App of Apps
+The active recovery test reduced the pool to one node with 1 OCPU and 6 GB,
+but OCI still returned `Out of host capacity`. This is a regional capacity
+limitation for ARM hosts in `sa-saopaulo-1`, not a Terraform schema or image
+compatibility error.
 
-Once the Kubernetes cluster is set, and ArgoCD is deployed using Terraform. Using ArgoCD and GitOps ([app of apps pattern](https://argo-cd.readthedocs.io/en/stable/operator-manual/cluster-bootstrapping/#app-of-apps-pattern)) we can deploy anything else that is desired to the Kubernetes cluster. For now, using Helm I deployed the Helm charts stored in this [Github repository.](https://github.com/douglas85rj/dgsite)
+### Current provisioning status
 
-The site chart is stored in [`charts/dgsite`](https://github.com/douglas85rj/dgsite/tree/main/charts/dgsite). The Terraform bootstrap creates an Argo CD root Application using the app-of-apps approach; additional applications can be added as manifests under the same GitOps tree.
+The VCN, subnets, gateways, route tables, security lists, and OKE control
+plane have been created successfully. The OKE cluster is `ACTIVE`.
 
-## Setting up the CI for the site
+The worker node pool has not produced a running node. Its creation currently
+fails with:
 
-To achieve easy continuous integration for the site, and being able to automatically generate new container versions with any commit I push to GitHub, I used [GitHub Actions](https://github.com/features/actions).
+```text
+Out of host capacity
+```
 
-The configuration is done in the code repository itself. In the file: [.github/workflows/build-deploy-docker.yml ](https://github.com/ricardllop/dgsite/blob/main/.github/workflows/build-deploy-docker.yml).
+Consequently, Kubernetes workloads cannot run yet and the Argo CD bootstrap
+must wait until OCI provides capacity or the tenancy is moved to another
+subscribed region. Re-running Terraform is safe, but repeated attempts will
+continue to fail while the regional capacity constraint remains.
 
-You can see this Github workflow will actually do both CI and CD (along with ArgoCD). I will explain the CI here and the CD on the section below.
+## Provisioning the cluster
 
-This GitHub Action workflow builds and pushes a Docker image to Docker Hub when changes are pushed to the `main` branch.
+### Prerequisites
 
-1. Logs in to Docker Hub using credentials stored in Github secrets
-2. Installs and configures QEMU, enabling cross-platform builds.
-3. Configures Docker Buildx, a CLI tool for advanced Docker image building features.
-4. Creates a unique tag for the Docker image using the current date and time in the format `ga-YYYY.MM.DD-HHMM`
-5. Builds the Docker image for the `linux/arm64` platform. Pushes the built image to Docker Hub. Tags the image using the timestamp tag generated in the previous step
+- Terraform >= 1.6
+- OCI CLI authenticated with `~/.oci/config`
+- `kubectl`
+- Helm
+- An ARM64 OKE image compatible with the selected Kubernetes version
 
-With these steps, we have the CI configuration completed, and any commit to the main branch will trigger a new Docker image tag build that we could (if desired) deploy manually to the cluster. But we have gone further and set up a CD part.
+The private OCI key, fingerprint, user OCID, tenancy OCID, and kubeconfig are
+local credentials. They must not be committed to Git. Use
+[`terraform.tfvars.example`](https://github.com/douglas85rj/dgsite/blob/main/infra/terraform/terraform.tfvars.example)
+as a template and keep the real `terraform.tfvars` local.
 
-## Setting up the CD for the site
+From the Terraform root:
 
-To achieve easy continuous deployment, apart from having ArgoCD on autosync configuration, there is an additional part on the GitHub Action workflow that is triggered on push to the `main` branch. Therefore, on each build and push to the Docker registry, the following actions will also execute:
+```bash
+cd infra/terraform
+terraform init
+terraform plan -var-file=terraform.tfvars
+terraform apply -var-file=terraform.tfvars
+```
 
-1. Checks out the Helm charts remote repository `helm-charts` directory `dgsite-chart` to the local `dgsite-chart` directory.
-2. Uses yq, a command-line YAML processor, to update the image tag in the `dgsite-chart/values.yaml` file with the new Docker image tag.
-3. Configures Git with a default username and email for committing changes.
-4. Commits the updated `values.yaml` file (with the new image tag) to the repository.
-5. Pushes the commit to the `main` branch.
+The region and image must be compatible. The current target region is
+`sa-saopaulo-1`, with Kubernetes `v1.36.4`. The node image must be queried
+from OCI for the selected region, Kubernetes version, and `AARCH64`
+architecture; an image from another region cannot be reused.
 
-Then ArgoCD will detect those changes on its periodic refresh and will sync (as autosync is activated), deploying the newly built container to the cluster.
+After a successful node-pool creation, generate a local kubeconfig:
 
-## Conclusions
+```bash
+oci ce cluster create-kubeconfig \
+  --cluster-id "$(terraform output -raw cluster_id)" \
+  --file "$HOME/.kube/dgsite-free" \
+  --region sa-saopaulo-1 \
+  --token-version 2.0.0 \
+  --kube-endpoint PUBLIC_ENDPOINT
 
-This project demonstrates a robust, full-stack DevOps pipeline, showcasing skills in infrastructure automation, containerization, CI/CD, and GitOps. The use of Oracle Cloud’s free-tier Kubernetes cluster, Terraform for infrastructure provisioning, and ArgoCD for managing deployments with the app-of-apps pattern provides a solid foundation for scaling applications.
+export KUBECONFIG="$HOME/.kube/dgsite-free"
+kubectl get nodes
+```
 
-The CI/CD pipeline, powered by GitHub Actions, automates the build and deployment of the website, with updates quickly reflected in the live environment through ArgoCD's autosync feature.
+The expected result is at least one node in `Ready` state. Do not continue
+with the bootstrap phase while the node list is empty.
 
-In conclusion, this setup might be overkill for a static website, but it serves as a perfect practice project to showcase my knowledge with modern DevOps tools and methodologies. The flexibility and scalability of the architecture ensure that the system can easily accommodate future enhancements, making it a valuable foundation for future projects and experiments.
+## Argo CD bootstrap
+
+Argo CD is intentionally managed from a separate Terraform root. This avoids
+initializing the Kubernetes and Helm providers before the OKE cluster and its
+kubeconfig exist.
+
+After `kubectl get nodes` reports a ready worker:
+
+```bash
+cd infra/bootstrap
+cp terraform.tfvars.example terraform.tfvars
+# Set kubeconfig_path to the local kubeconfig path.
+terraform init
+terraform plan -var-file=terraform.tfvars
+terraform apply -var-file=terraform.tfvars
+```
+
+The bootstrap Terraform root:
+
+1. Installs the `argo-cd` Helm chart in the `argocd` namespace.
+2. Applies a root Argo CD `Application`.
+3. Points Argo CD at this repository and the `main` branch.
+4. Deploys the Helm chart at `charts/dgsite` to the `dgsite` namespace.
+5. Enables automated sync, pruning, and self-healing.
+
+The bootstrap currently has not been applied because the cluster has no
+running worker node.
+
+## Helm application
+
+The site chart is located at [`charts/dgsite`](https://github.com/douglas85rj/dgsite/tree/main/charts/dgsite). It
+creates the site Deployment and Service and can create the configured Ingress.
+The chart values define the container image repository, image tag, replica
+count, service, and ingress settings.
+
+Argo CD watches the chart path directly in this repository. A change to the
+chart or its values is therefore a GitOps change and is reconciled by Argo CD
+after the bootstrap is operational.
+
+## CI and continuous delivery
+
+The workflow
+[`build-deploy-docker.yml`](https://github.com/douglas85rj/dgsite/blob/main/.github/workflows/build-deploy-docker.yml)
+runs on pushes to `main` and can also be started manually.
+
+It performs these steps:
+
+1. Checks out the repository.
+2. Configures QEMU and Docker Buildx.
+3. Logs in to Docker Hub using GitHub Actions secrets.
+4. Builds the site image for `linux/arm64`.
+5. Pushes `docker.io/douglas85rj/dgsite:sha-<commit>`.
+6. Updates `charts/dgsite/values.yaml` with the same immutable image tag.
+7. Commits and pushes the GitOps values change.
+
+The workflow ignores changes that only update
+`charts/dgsite/values.yaml`, preventing an image-tag commit from triggering a
+second image build. Once Argo CD is running, it detects the values change and
+automatically synchronizes the new image to the cluster.
+
+## Operational notes
+
+The Oracle Always Free compute allowance is shared across the tenancy and
+capacity is regional. A smaller `VM.Standard.A1.Flex` shape can reduce
+resource consumption, but it cannot override an OCI `Out of host capacity`
+response. If capacity does not return in `sa-saopaulo-1`, the practical
+alternatives are to retry later, use another region to which the tenancy is
+subscribed, or contact Oracle support.
+
+Terraform state contains infrastructure identifiers and should be stored
+securely. For production, configure an OCI Object Storage backend in a
+separate `backend.tf`; do not put credentials or private keys in the
+repository.

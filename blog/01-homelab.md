@@ -9,6 +9,8 @@ tags: [DevOps, Homelab, Docker, Caddy, Immich, Adguard, Jellyfin]
 
 This article is about a self-hosted homelab running on a dedicated mini PC in a home network, managed entirely with Docker Compose. The setup provides photo management, media streaming, network-level ad blocking, automatic TLS reverse proxying, and dynamic DNS — all accessible from anywhere via a public domain or locally via `.local` hostnames.
 
+<!-- truncate -->
+
 ## Network architecture
 
 A router forwards only ports **80** and **443** to the mini PC. All public and local traffic enters through **Caddy**, which terminates TLS and routes requests to the appropriate service. Internal services communicate over a shared Docker bridge network (`homelab`) and are never directly reachable from outside.
