@@ -81,8 +81,6 @@
         "- Platform stack: Terraform, Terragrunt, AWS EKS, Istio, Vault + External Secrets, External DNS, Atlantis, Atlas MongoDB, Grafana Loki, Opentelemetry, Kafka",
         "Monitoro a plataforma, investigo e resolvo incidentes críticos, contribuindo para manter a confiabilidade dos serviços e minimizar interrupções para as equipes de desenvolvimento.",
         "Desenvolvo scripts e automatizo processos operacionais para padronizar tarefas recorrentes, aumentar a eficiência e reduzir a intervenção manual.",
-        "Projeto, mantenho e melhoro o ecossistema de CI/Build de ponta a ponta para clientes de jogos Unity Mobile e imagens de contêineres Java backend.",
-        "- CI stack: Jenkins, agentes Mac para builds Unity gerenciados com Ansible, BuildKit (Docker), Trivy, GitLab.",
         "Implemento e mantenho um ecossistema de CD baseado em GitOps para aplicações de servidor.",
         "- CD stack: ArgoCD, Helm, Kubernetes."
       ]
