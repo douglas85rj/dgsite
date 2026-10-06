@@ -168,6 +168,17 @@ The workflow
 [`build-deploy-docker.yml`](https://github.com/douglas85rj/dgsite/blob/main/.github/workflows/build-deploy-docker.yml)
 runs on pushes to `main` and can also be started manually.
 
+Before running it, configure these repository Actions secrets under
+**Settings > Secrets and variables > Actions**:
+
+- `DOCKERHUB_USERNAME`: the Docker Hub username (`douglas85rj`)
+- `DOCKERHUB_TOKEN`: a Docker Hub access token with permission to push to
+  `douglas85rj/dgsite` (use an access token rather than the Docker Hub account
+  password)
+
+The workflow validates that both secrets are present before attempting the
+Docker login.
+
 It performs these steps:
 
 1. Checks out the repository.
