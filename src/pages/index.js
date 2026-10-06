@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import Layout from '@theme/Layout';
 import styles from './index.module.css';
 import profileData from '@site/src/data/profile.json';
@@ -45,6 +46,7 @@ const UI = {
 function HomepageHeader({ locale }) {
   const ui = UI[locale] || UI.en;
   const description = loc(locale, profileData, 'description');
+  const learnMoreUrl = useBaseUrl(profileData.learnMoreLink.url);
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
@@ -78,7 +80,7 @@ function HomepageHeader({ locale }) {
               {ui.downloadResume}
             </button>
             <div>
-              <a href={profileData.learnMoreLink.url} className={styles.terminalLink}>
+              <a href={learnMoreUrl} className={styles.terminalLink}>
                 <div className={styles.terminalArrowHint} aria-hidden="true">
                   <span className={styles.terminalHintLabel}>EXPLORE</span>
                   <span className={styles.cmdArrow}>▶</span>
