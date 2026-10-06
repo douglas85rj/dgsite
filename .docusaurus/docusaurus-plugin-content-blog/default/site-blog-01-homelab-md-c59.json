@@ -50,7 +50,7 @@
       "title": "Infrastructure Engineer",
       "url": "https://github.com/douglas85rj",
       "imageURL": "https://github.com/douglas85rj.png",
-      "key": "rllop",
+      "key": "dgsite",
       "page": null
     }
   ],
@@ -58,7 +58,7 @@
     "slug": "homelab",
     "title": "Docker compose Homelab",
     "authors": [
-      "rllop"
+      "dgsite"
     ],
     "tags": [
       "DevOps",

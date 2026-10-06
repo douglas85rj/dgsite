@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunkdgsite=globalThis.webpackChunkdgsite||[]).push([[882],{6341(t){t.exports=JSON.parse('{"authors":[{"name":"Douglas Souza","title":"Infrastructure Engineer","url":"https://github.com/douglas85rj","imageURL":"https://github.com/douglas85rj.png","key":"rllop","page":null,"count":1}]}')}}]);

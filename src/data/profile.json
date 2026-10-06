@@ -63,26 +63,20 @@
       "title": "Infrastructure Solutions Analyst",
       "subtitle": "Hitss Brazil",
       "description": [
-        "Operate and evolve a Kubernetes-based AWS cloud platform managed entirely through Infrastructure as Code, supporting multiple mobile game development teams with a scalable, resilient, and self-service platform.",
-        "- Platform stack: Grafana, SQL, Monitoring, GCP, AWS, Oracle",
-        "Monitor the platform, investigate and resolve critical incidents, and help maintain service reliability while minimizing disruption to development teams."],
+        "Monitor the platform, investigate and resolve critical incidents, and help maintain service reliability while minimizing disruption to development teams.",
+        "- Platform stack: Grafana, GCP, SQL, Monitoring, AWS, Oracle",
+        "Develop scripts and automate operational processes to standardize recurring tasks, improve efficiency, and reduce manual intervention."
+      ],
       "description_es": [
-        "Opero y evoluciono una plataforma cloud basada en Kubernetes en AWS, completamente gestionada mediante Infraestructura como Código, dando soporte a múltiples equipos de videojuegos móviles con una plataforma escalable, resiliente y de autoservicio.",
-        "- Platform stack: Terraform, Terragrunt, AWS EKS, Istio, Vault + External Secrets, External DNS, Atlantis, Atlas MongoDB, Grafana Loki, Opentelemetry, Kafka",
         "Monitoreo la plataforma, investigo y resuelvo incidentes críticos, contribuyendo a mantener la fiabilidad de los servicios y a minimizar las interrupciones para los equipos de desarrollo.",
-        "Desarrollo scripts y automatizo procesos operativos para estandarizar tareas recurrentes, mejorar la eficiencia y reducir la intervención manual.",
-        "Diseño, mantenimiento y mejora del ecosistema CI/Build de extremo a extremo para clientes de videojuegos Unity Mobile e imágenes de contenedores Java backend.",
-        "- CI stack: Jenkins, Unity build Mac agents (Ansible managed), BuildKit (Docker), Trivy, GitLab.",
-        "Implementación y mantenimiento de un ecosistema CD basado en GitOps para aplicaciones de servidor.",
-        "- CD stack: ArgoCD, Helm, Kubernetes."
+        "- Platform stack: Grafana, GCP, SQL, Monitoring, AWS, Oracle",
+        "Desarrollo scripts y automatizo procesos operativos para estandarizar tareas recurrentes, mejorar la eficiencia y reducir la intervención manual."
       ],
       "description_pt": [
-        "Opero e evoluo uma plataforma cloud baseada em Kubernetes na AWS, totalmente gerenciada por Infraestrutura como Código, dando suporte a várias equipes de desenvolvimento de jogos mobile com uma plataforma escalável, resiliente e self-service.",
-        "- Platform stack: Terraform, Terragrunt, AWS EKS, Istio, Vault + External Secrets, External DNS, Atlantis, Atlas MongoDB, Grafana Loki, Opentelemetry, Kafka",
         "Monitoro a plataforma, investigo e resolvo incidentes críticos, contribuindo para manter a confiabilidade dos serviços e minimizar interrupções para as equipes de desenvolvimento.",
-        "Desenvolvo scripts e automatizo processos operacionais para padronizar tarefas recorrentes, aumentar a eficiência e reduzir a intervenção manual.",
-        "Implemento e mantenho um ecossistema de CD baseado em GitOps para aplicações de servidor.",
-        "- CD stack: ArgoCD, Helm, Kubernetes."
+        "- Platform stack: Grafana, GCP, SQL, Monitoring, AWS, Oracle",
+        "Desenvolvo scripts e automatizo processos operacionais para padronizar tarefas recorrentes, melhorar a eficiência e reduzir a intervenção manual."
+      
       ]
     },
     {
@@ -118,15 +112,15 @@
       "subtitle": "CAEFE - Caixa de Assistência dos Empregados de Furnas e Eletronuclear",
       "description": [
         "Worked as a Full Stack Developer in Rio de Janeiro, Brazil.",
-        "- Platform stack: React, Java, SQL, Linux, JavaScript, Node.js"
+        "- Platform stack: React, Java, SQL, Linux, JavaScript, Node.js, MongoDB, Git, GitLab CI/CD"
       ],
       "description_es": [
         "Trabajó como Desarrollador Full Stack en Río de Janeiro, Brasil.",
-        "- Platform stack: React, Java, SQL, Linux, JavaScript, Node.js"
+        "- Platform stack: React, Java, SQL, Linux, JavaScript, Node.js, MongoDB, Git, GitLab CI/CD"
       ],
       "description_pt": [
         "Atuei como Desenvolvedor Full Stack no Rio de Janeiro, Brasil.",
-        "- Platform stack: React, Java, SQL, Linux, JavaScript, Node.js"
+        "- Platform stack: React, Java, SQL, Linux, JavaScript, Node.js, MongoDB, Git, GitLab CI/CD"
       ]
     },
     {
