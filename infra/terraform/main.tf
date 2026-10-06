@@ -1,3 +1,12 @@
+data "oci_identity_availability_domains" "this" {
+  compartment_id = var.compartment_id
+}
+
+data "oci_identity_fault_domains" "this" {
+  availability_domain = data.oci_identity_availability_domains.this.availability_domains[0].name
+  compartment_id      = var.compartment_id
+}
+
 resource "oci_core_vcn" "this" {
   compartment_id = var.compartment_id
   cidr_blocks    = ["10.0.0.0/16"]
@@ -130,9 +139,20 @@ resource "oci_containerengine_node_pool" "this" {
     memory_in_gbs = var.node_memory_in_gbs
     ocpus         = var.node_ocpus
   }
-  ssh_public_key      = var.ssh_public_key
-  quantity_per_subnet = var.node_count
-  subnet_ids          = [oci_core_subnet.private.id]
+  ssh_public_key = var.ssh_public_key
+  node_config_details {
+    size = var.node_count
+    placement_configs {
+      availability_domain = data.oci_identity_availability_domains.this.availability_domains[0].name
+      fault_domains       = [data.oci_identity_fault_domains.this.fault_domains[0].name]
+      subnet_id           = oci_core_subnet.private.id
+    }
+    placement_configs {
+      availability_domain = data.oci_identity_availability_domains.this.availability_domains[0].name
+      fault_domains       = [data.oci_identity_fault_domains.this.fault_domains[1].name]
+      subnet_id           = oci_core_subnet.private.id
+    }
+  }
 
   node_source_details {
     image_id    = var.node_image_id
