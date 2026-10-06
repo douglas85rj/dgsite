@@ -1,23 +1,19 @@
 image:
   repository: docker.io/douglas85rj/dgsite
-  tag: latest
+  tag: sha-e54a908ec1b6983bf9dee43c7a96a29a10403640
   pullPolicy: IfNotPresent
-
 replicaCount: 2
-
 service:
   type: LoadBalancer
   port: 80
   annotations:
     oci.oraclecloud.com/load-balancer-type: "nlb"
-
 ingress:
   enabled: false
   className: nginx
   annotations: {}
   host: dgsite.com
   tls: []
-
 resources:
   requests:
     cpu: 50m
