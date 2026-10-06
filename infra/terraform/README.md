@@ -43,8 +43,9 @@ The Always Free limit is shared by the tenancy. The default configuration uses
 two 2 OCPU/12 GB ARM nodes (4 OCPUs/24 GB total), which consumes the full
 Always Free compute allowance; capacity is region-dependent. If capacity is
 unavailable, temporarily reduce `node_ocpus` and `node_memory_in_gbs` or use a
-different region. The two nodes are distributed across two Fault Domains when
-the region provides them.
+different region. Reducing the shape is only a retry strategy and does not
+override an OCI `Out of host capacity` response. The two nodes are distributed
+across two Fault Domains when the region provides them.
 
 ```bash
 terraform init

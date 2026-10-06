@@ -21,6 +21,7 @@ No test suite is configured.
 ## Architecture
 
 ### Content Structure
+
 - `src/pages/index.js` — Homepage: hero section, badges, "Download Resume" button, terminal-style infra card, and vertical work timeline (all inline, no separate component file)
 - `src/data/profile.json` — Single source of truth for all profile data: name, title, careerStartYear, contact, skills, badges, description paragraphs, profileImage, learnMoreLink, and experiences array
 - `src/utils/generateResume.js` — Generates and downloads a 1-page A4 PDF resume from `profile.json` using jsPDF (dynamically imported for SSR safety). Mirrors the site's color palette.
@@ -30,6 +31,7 @@ No test suite is configured.
 - `blog/authors.yml` — Author definitions required when creating new blog posts (add entries here first)
 
 ### Key rendering patterns in `index.js`
+
 - `{yearsExp}` placeholder in `profile.json` description strings is resolved at runtime via `resolveText()`
 - Experience `description` array supports two line formats rendered by `renderDescBlock()`:
   - `"- Label: item1, item2"` → labeled tech-stack pills (`DescStack`)
@@ -37,6 +39,7 @@ No test suite is configured.
 - `src/pages/index.module.css` — Component-level styles for the homepage (hero, timeline, terminal card, etc.)
 
 ### i18n (English / Spanish)
+
 The site is bilingual. Two separate systems handle translations:
 
 1. **`profile.json` dynamic content** — append `_es` to any field to provide a Spanish override (e.g., `title_es`, `date_es`, `description_es`). The `loc(locale, obj, key)` helper in `index.js` picks the right variant at render time.
@@ -45,21 +48,26 @@ The site is bilingual. Two separate systems handle translations:
 4. **Navbar/footer** — translated in `i18n/es/docusaurus-theme-classic/navbar.json` and `footer.json`.
 
 ### Dependencies
+
 - `react-vertical-timeline-component` — vertical timeline in the Experience section
 - `jspdf` — PDF resume generation (dynamic import, client-side only)
 
 ### Configuration
+
 - `docusaurus.config.js` — Site config with navbar, footer, and theme. Respects `DOCKER_IMAGE_TAG` and `DOCUSAURUS_CONF_URL` env vars
 - `sidebars.js` — Auto-generates sidebar from `docs/` directory
 
 ### CI/CD & Deployment
+
 The GitHub Actions workflow (`.github/workflows/build-deploy-docker.yml`) triggers on push to `main`:
+
 1. Builds a multi-stage Docker image for `linux/arm64` (Nginx serving static files)
-2. Tags the image with timestamp format `ga-YYYY.MM.DD-HHMM` and pushes to Docker Hub (`rllopdev/dgsite`)
-3. Checks out a separate Helm repo (`ricardllop/oke-helm-charts`) and updates the image tag in `values.yaml` using `yq`
+2. Tags the image with timestamp format `ga-YYYY.MM.DD-HHMM` and pushes to Docker Hub (`douglas85rj/dgsite`)
+3. Checks out a separate Helm repo (`douglas85rj/oke-helm-charts`) and updates the image tag in `values.yaml` using `yq`
 4. ArgoCD detects the Helm repo change and auto-syncs the deployment
 
 **Dockerfile** targets production ARM64. **Dockerfile-local** is for local container testing with different URL defaults:
+
 ```bash
 docker build -f Dockerfile-local -t dgsite:local .
 docker run -p 80:80 dgsite:local
