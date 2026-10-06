@@ -2,7 +2,7 @@
 
 Personal portfolio and CV site for a DevOps/Cloud Engineer, built with [Docusaurus](https://docusaurus.io/docs) (React-based static site generator).
 
-Live at **[dgsouza.com](https://dgsite.com)** — hosted as a Docker container on a self-managed Kubernetes cluster on Oracle Cloud, deployed via GitOps with ArgoCD.
+Live at **[dgsite](https://douglas85rj.github.io/dgsite/)** — hosted as a Docker container on a self-managed Kubernetes cluster on Oracle Cloud, deployed via GitOps with ArgoCD.
 
 ## Run locally
 

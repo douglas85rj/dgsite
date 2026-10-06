@@ -8,7 +8,7 @@
     "email": "douglas85rj@gmail.com",
     "linkedin": "https://www.linkedin.com/in/douglas-monteiro-de-souza/",
     "github": "github.com/douglas85rj",
-    "website": ""
+    "website": "https://douglas85rj.github.io/dgsite/"
   },
   "skills": ["Monitoramento", "AWS", "Terraform", "Docker", "GitLab CI", "Azure", "Bash", "javascript", "Go", "Kubernetes", "Linux", "Jenkins", "GitOps", "ArgoCD", "Helm"],
   "badges": [
@@ -64,17 +64,16 @@
       "subtitle": "Hitss Brazil",
       "description": [
         "Monitor the platform, investigate and resolve critical incidents, and help maintain service reliability while minimizing disruption to development teams.",
-        "- Platform stack: Grafana, GCP, SQL, Monitoring, AWS, Oracle",
+        "- Platform stack: Grafana, GCP, SQL, Monitoring, AWS, Oracle, tsuru, zabbix, Linux, Bash", 
         "Develop scripts and automate operational processes to standardize recurring tasks, improve efficiency, and reduce manual intervention."
       ],
       "description_es": [
         "Monitoreo la plataforma, investigo y resuelvo incidentes críticos, contribuyendo a mantener la fiabilidad de los servicios y a minimizar las interrupciones para los equipos de desarrollo.",
-        "- Platform stack: Grafana, GCP, SQL, Monitoring, AWS, Oracle",
+        "- Platform stack: Grafana, GCP, SQL, Monitoring, AWS, Oracle, tsuru, zabbix, Linux, Bash", 
         "Desarrollo scripts y automatizo procesos operativos para estandarizar tareas recurrentes, mejorar la eficiencia y reducir la intervención manual."
       ],
       "description_pt": [
-        "Monitoro a plataforma, investigo e resolvo incidentes críticos, contribuindo para manter a confiabilidade dos serviços e minimizar interrupções para as equipes de desenvolvimento.",
-        "- Platform stack: Grafana, GCP, SQL, Monitoring, AWS, Oracle",
+        "- Platform stack: Grafana, GCP, SQL, Monitoring, AWS, Oracle, tsuru, zabbix, Linux, Bash", 
         "Desenvolvo scripts e automatizo processos operacionais para padronizar tarefas recorrentes, melhorar a eficiência e reduzir a intervenção manual."
       
       ]
