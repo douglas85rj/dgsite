@@ -1,10 +1,10 @@
-FROM node:alpine AS builder
+FROM node:24-alpine AS builder
 
 ARG DOCUSAURUS_CONF_URL='http://localhost:80'
 ARG DOCKER_IMAGE_TAG='local'
 
 COPY . .
-RUN npm config delete proxy; npm config delete https-proxy; npm install
+RUN npm config delete proxy; npm config delete https-proxy; npm ci
 RUN npm run build
 
 FROM nginx:mainline-alpine-slim

@@ -66,7 +66,7 @@ The GitHub Actions workflow (`.github/workflows/build-deploy-docker.yml`) trigge
 3. Checks out a separate Helm repo (`douglas85rj/oke-helm-charts`) and updates the image tag in `values.yaml` using `yq`
 4. ArgoCD detects the Helm repo change and auto-syncs the deployment
 
-**Dockerfile** targets production ARM64. **Dockerfile-local** is for local container testing with different URL defaults:
+**Dockerfile** targets production ARM64 with Node.js 24. **Dockerfile-local** is for local container testing with different URL defaults:
 
 ```bash
 docker build -f Dockerfile-local -t dgsite:local .
