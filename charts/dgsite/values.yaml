@@ -1,6 +1,6 @@
 image:
   repository: docker.io/douglas85rj/dgsite
-  tag: sha-e54a908ec1b6983bf9dee43c7a96a29a10403640
+  tag: sha-d0edad4b3faf4e55da12698cdb9ee43e916136a3
   pullPolicy: IfNotPresent
 replicaCount: 2
 service:
