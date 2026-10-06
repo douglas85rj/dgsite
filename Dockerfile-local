@@ -1,4 +1,4 @@
-FROM node:alpine as builder
+FROM node:alpine AS builder
 
 ARG DOCUSAURUS_CONF_URL='http://localhost:80'
 ARG DOCKER_IMAGE_TAG='local'

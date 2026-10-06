@@ -54,7 +54,7 @@ The site is bilingual. Two separate systems handle translations:
 
 ### Configuration
 
-- `docusaurus.config.js` — Site config with navbar, footer, and theme. Respects `DOCKER_IMAGE_TAG` and `DOCUSAURUS_CONF_URL` env vars
+- `docusaurus.config.js` — Site config with navbar, footer, and theme. Respects `DOCKER_IMAGE_TAG`, `DOCUSAURUS_CONF_URL` (the public site URL), and `DOCUSAURUS_BASE_URL` env vars
 - `sidebars.js` — Auto-generates sidebar from `docs/` directory
 
 ### CI/CD & Deployment
