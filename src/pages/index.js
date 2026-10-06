@@ -35,7 +35,7 @@ const UI = {
     experience: 'Experiencia',
   },
   'pt-BR': {
-    greeting: (name) => `Olá, eu sou ${name}`,
+    greeting: (name) => `Olá, eu sou o ${name}`,
     downloadResume: 'Baixar currículo',
     terminalCmd: 'Clique para ver a infraestrutura e o CI/CD por trás deste site',
     exploreArch: 'Explorar a arquitetura',

@@ -1,7 +1,7 @@
 ---
 slug: homelab
 title: Homelab con Docker Compose
-authors: [rllop]
+authors: [dgsite]
 tags: [DevOps, Homelab, Docker, Caddy, Immich, Adguard, Jellyfin]
 ---
 

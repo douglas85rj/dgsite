@@ -77,13 +77,13 @@ const LABELS = {
     project1Desc:
       'Sitio personal (Docusaurus/React) contenedorizado y desplegado en un clúster Kubernetes siempre gratuito de Oracle Cloud. ' +
       'Infraestructura aprovisionada con Terraform, CI/CD mediante GitHub Actions, despliegue GitOps con ArgoCD y Helm.',
-    project1Link: 'Leer más: ricardllop.com/es/docs/site-infrastructure',
+    project1Link: 'Leer más: douglas85rj.github.io/dgsite/docs/site-infrastructure',
     project1Url: '',
     project2Title: 'Homelab con Docker Compose',
     project2Desc:
       'Homelab autoalojado en un mini PC gestionado con Docker Compose. Servicios: Immich (biblioteca de fotos), ' +
       'Jellyfin (servidor multimedia), AdGuard Home (DNS y bloqueo de anuncios), y Caddy como proxy inverso con TLS automático.',
-    project2Link: 'Leer más: ricardllop.com/es/blog/homelab',
+    project2Link: 'Leer más: https://douglas85rj.github.io/dgsite/es/blog/homelab',
     project2Url: '',
   },
   'pt-BR': {
@@ -97,14 +97,14 @@ const LABELS = {
     project1Desc:
       'Site pessoal (Docusaurus/React) conteinerizado e implantado em um cluster Kubernetes gratuito da Oracle Cloud. ' +
       'Infraestrutura provisionada com Terraform, CI/CD via GitHub Actions e implantação GitOps com ArgoCD e Helm.',
-    project1Link: 'Leia sobre isso: ricardllop.com/docs/site-infrastructure',
-    project1Url: 'https://ricardllop.com/pt-BR/docs/site-infrastructure',
+    project1Link: 'Leia sobre isso: douglas85rj.github.io/dgsite/docs/site-infrastructure',
+    project1Url: 'https://douglas85rj.github.io/dgsite/docs/site-infrastructure',
     project2Title: 'Homelab com Docker Compose',
     project2Desc:
       'Homelab hospedado em um mini PC e gerenciado com Docker Compose. Os serviços incluem Immich, ' +
       'Jellyfin, AdGuard Home e Caddy como proxy reverso com TLS automático.',
-    project2Link: 'Leia sobre isso: ricardllop.com/blog/homelab',
-    project2Url: 'https://ricardllop.com/pt-BR/blog/homelab',
+    project2Link: 'Leia sobre isso: douglas85rj.github.io/dgsite/blog/homelab',
+    project2Url: 'https://douglas85rj.github.io/dgsite/blog/homelab',
   },
 };
 
@@ -447,7 +447,7 @@ export async function downloadResume(locale = 'en') {
   doc.setFont('helvetica', 'normal');
   doc.setFontSize(7.5);
   doc.setTextColor(180, 210, 245);
-  doc.text('ricardllop.com', MARGIN, 292);
+  doc.text('douglas85rj.github.io/dgsite', MARGIN, 292);
 
-  doc.save('ricard-llop-resume.pdf');
+  doc.save('douglassouza-resume.pdf');
 }
