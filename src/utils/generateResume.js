@@ -57,13 +57,13 @@ const LABELS = {
     project1Desc:
       'Personal portfolio site (Docusaurus/React) containerized and deployed on an always-free Oracle Cloud Kubernetes cluster. ' +
       'Infrastructure provisioned with Terraform, CI/CD via GitHub Actions, GitOps deployment through ArgoCD and Helm.',
-    project1Link: 'Read about it here: ricardllop.com/docs/site-infrastructure',
+    project1Link: 'Read about it here: douglas85rj.github.io/dgsite/docs/site-infrastructure',
     project1Url: '',
     project2Title: 'Docker Compose Homelab',
     project2Desc:
       'Self-hosted homelab on a mini PC managed with Docker Compose. Services include Immich (photo library), ' +
       'Jellyfin (media server), AdGuard Home (DNS & ad blocking), and Caddy as a reverse proxy with automatic TLS.',
-    project2Link: 'Read about it here: ricardllop.com/blog/homelab',
+    project2Link: 'Read about it here: douglas85rj.github.io/dgsite/es/blog/homelab',
     project2Url: '',
   },
   es: {

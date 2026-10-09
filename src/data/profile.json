@@ -3,7 +3,7 @@
   "lastName": "Souza",
   "title": "Infrastructure Solutions Analyst  - DevOps / Cloud Engineer",
   "title_pt": "Analista de Soluções de Infraestrutura - Engenheiro DevOps / Cloud",
-  "careerStartYear": 2007,
+  "careerStartYear": 2011,
   "contact": {
     "email": "douglas85rj@gmail.com",
     "linkedin": "https://www.linkedin.com/in/douglas-monteiro-de-souza/",
@@ -73,6 +73,7 @@
         "Desarrollo scripts y automatizo procesos operativos para estandarizar tareas recurrentes, mejorar la eficiencia y reducir la intervención manual."
       ],
       "description_pt": [
+        "Monitoro a plataforma, investigo e resolvo incidentes críticos, ajudando a manter a confiabilidade do serviço e minimizando a interrupção para as equipes de desenvolvimento.",
         "- Platform stack: Grafana, GCP, SQL, Monitoring, AWS, Oracle, tsuru, zabbix, Linux, Bash", 
         "Desenvolvo scripts e automatizo processos operacionais para padronizar tarefas recorrentes, melhorar a eficiência e reduzir a intervenção manual."
       
@@ -202,10 +203,16 @@
       "title_es": "Grado en Ingeniería Informática",
       "subtitle": "InfnetInstitute, Rio de Janeiro",
       "description": [
-        "Completed a postgraduate degree in Full Stack Web Development, focusing on modern web technologies and best practices."
+        "Completed a postgraduate degree in Full Stack Web Development, focusing on modern web technologies and best practices.",
+        "-  stack: React, React hooks, Node.js, Express JS, Gastby, TypeScript, Next.js, GraphQL, MongoDB, Git, "
       ],
       "description_es": [
-        "Completó un grado postgrado en Desarrollo Web Full Stack, enfocado en tecnologías web modernas y buenas prácticas."
+        "Completó un grado postgrado en Desarrollo Web Full Stack, enfocado en tecnologías web modernas y buenas prácticas.",
+        "-  stack: React, React hooks, Node.js, Express JS, Gastby, TypeScript, Next.js, GraphQL, MongoDB, Git, "
+      ],
+      "description_pt": [
+        "Finalizei um curso pós-graduado em Desenvolvimento Web Full Stack, com foco em tecnologias web modernas e boas práticas.",
+        "-  stack: React, React hooks, Node.js, Express JS, Gastby, TypeScript, Next.js, GraphQL, MongoDB, Git, "
       ]
     }
   ]

@@ -220,7 +220,7 @@ export default function Home() {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="Ricard Llop">
+      description="Douglas Souza">
       <HomepageHeader locale={locale} />
       <div className={styles.sectionDivider} />
       <main>
