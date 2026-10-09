@@ -9,8 +9,9 @@
     "linkedin": "https://www.linkedin.com/in/douglas-monteiro-de-souza/",
     "github": "github.com/douglas85rj",
     "website": "https://douglas85rj.github.io/dgsite/"
-  },
-  "skills": ["Monitoramento", "AWS", "Terraform", "Docker", "GitLab CI", "Azure", "Bash", "javascript", "Go", "Kubernetes", "Linux", "Jenkins", "GitOps", "ArgoCD", "Helm"],
+  }, 
+
+  "skills": ["Grafana", "AWS", "Terraform", "Docker", "GitLab CI", "Azure", "Bash", "javascript", "Go", "Kubernetes", "Linux", "Jenkins", "GitOps", "ArgoCD", "Helm"],
   "badges": [
     {
       "url": "https://www.credly.com/earner/earned/badge/a710651e-82d2-41b9-83ab-6128ce5a94ae",
@@ -33,19 +34,13 @@
     
   ],
   "description": [
-    "Infrastructure Solutions Analyst and DevOps Engineer with {yearsExp}+ years of experience across cloud infrastructure, DevOps, SRE, systems administration, and full-stack development.",
-    "Experienced with AWS, Azure, Docker, Kubernetes, Terraform, CI/CD, monitoring, observability, and infrastructure automation, with a focus on scalable solutions, process optimization, and operational efficiency.",
-    "Adaptable and committed to continuous learning and knowledge sharing, currently focused on Cloud Infrastructure, DevOps, and SRE opportunities involving infrastructure automation, CI/CD pipelines, observability, and DevOps culture."
+    "Infrastructure Solutions Analyst with over 18 years of experience in IT (support, Windows/Linux administration, full-stack development, and cloud). Currently at Hitss Brasil, I monitor critical digital advertising platforms with Grafana and GCP. My focus is on making systems more reliable and eliminating manual work. I created integrated alerts between Grafana and Slack, a knowledge base, and automations in SQL (Oracle and MySQL) that helped reduce incidents escalated to the development team by 30%. My team is working on implementing an AI agent (Microsoft Copilot) that consults this base to support incident resolution. I am directing my career towards DevOps, with certifications in AWS, Azure, and OCI and practical projects in Terraform, Docker, and CI/CD in my portfolio."
   ],
   "description_es": [
-    "Analista de Soluciones de Infraestructura e Ingeniero DevOps con más de {yearsExp} años de experiencia en infraestructura cloud, DevOps, SRE, administración de sistemas y desarrollo full stack.",
-    "Experiencia con AWS, Azure, Docker, Kubernetes, Terraform, CI/CD, monitorización, observabilidad y automatización de infraestructura, con foco en soluciones escalables, optimización de procesos y eficiencia operativa.",
-    "Profesional adaptable y comprometido con el aprendizaje continuo y el intercambio de conocimientos, actualmente enfocado en oportunidades de Infraestructura Cloud, DevOps y SRE relacionadas con automatización, pipelines CI/CD, observabilidad y cultura DevOps."
-  ],
+    "Analista de soluciones de infraestructura con más de 18 años de experiencia en TI (soporte, administración de Windows/Linux, desarrollo full stack y cloud). Actualmente en Hitss Brasil, monitoreo plataformas críticas de publicidad digital con Grafana y GCP. Mi enfoque es hacer que los sistemas sean más confiables y eliminar el trabajo manual. Creé alertas integradas entre Grafana y Slack, una base de conocimiento y automatizaciones en SQL (Oracle y MySQL) que ayudaron a reducir en un 30% los incidentes escalados al equipo de desarrollo. Mi equipo está trabajando en la implementación de un agente de IA (Microsoft Copilot) que consulta esta base para apoyar la resolución de incidentes. Estoy dirigiendo mi carrera hacia DevOps, con certificaciones en AWS, Azure y OCI y proyectos prácticos en Terraform, Docker y CI/CD en mi portafolio."    
+   ],
   "description_pt": [
-    "Analista de Soluções de Infraestrutura e Engenheiro DevOps com mais de {yearsExp} anos de experiência em infraestrutura cloud, DevOps, SRE, administração de sistemas e desenvolvimento full stack.",
-    "Experiência com AWS, Azure, Docker, Kubernetes, Terraform, CI/CD, monitoramento, observabilidade e automação de infraestrutura, com foco em soluções escaláveis, otimização de processos e eficiência operacional.",
-    "Profissional adaptável e comprometido com aprendizado contínuo e compartilhamento de conhecimento, atualmente focado em oportunidades de Infraestrutura Cloud, DevOps e SRE envolvendo automação de infraestrutura, pipelines CI/CD, observabilidade e cultura DevOps."
+    "Analista de infraestrutura com mais de 18 anos em TI (suporte, administração Windows/Linux, desenvolvimento full stack e cloud). Hoje, na Hitss Brasil, monitoro plataformas críticas de publicidade digital com Grafana e GCP. Meu foco é deixar sistemas mais confiáveis e eliminar trabalho manual. Criei alertas integrados entre Grafana e Slack, uma base de conhecimento e automações em SQL (Oracle e MySQL) que ajudaram a reduzir em 30% os incidentes escalados ao time de desenvolvimento. Minha equipe trabalha na implantação de um agente de IA (Microsoft Copilot) que consulta essa base para apoiar a resolução de incidentes. Estou direcionando minha carreira para DevOps, com certificações em AWS, Azure e OCI e projetos práticos em Terraform, Docker e CI/CD no meu portfólio"
   ],
   "profileImage": {
     "src": "img/sitelogo.png",
