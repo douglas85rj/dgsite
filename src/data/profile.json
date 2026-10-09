@@ -58,16 +58,13 @@
       "title": "Infrastructure Solutions Analyst",
       "subtitle": "Hitss Brazil",
       "description": [
-        " Created detailed documentation and standard operating procedures (SOPs) for critical processes, ensuring consistency, compliance, and knowledge transfer within the team. Actively participated in reviewing and updating existing SOPs to reflect best practices and process changes, resulting in a 30% reduction in incident resolution time and improved operational efficiency, while also reducing reliance on tacit knowledge, facilitating the training of new team members. Monitored the platform, investigated and resolved critical incidents, contributing to maintaining service reliability and minimizing disruptions for development teams.",
         "- Platform stack: Grafana, GCP, SQL, Monitoring, AWS, Oracle, tsuru, zabbix, Linux, Bash"
       ],
       "description_es": [
 
-        "Creei documentación detallada y procedimientos operativos estándar (SOPs) para procesos críticos, garantizando consistencia, conformidad y transferencia de conocimiento dentro de la equipo. Participé activamente en la revisión y actualización de SOPs existentes para reflejar las mejores prácticas y cambios en los procesos, con este trabajo reducimos en 30% el tiempo de resolución de incidentes y mejoramos la eficiencia operativa, y reducimos también la dependencia de conocimiento tácito, facilitando el entrenamiento de nuevos miembros de la equipo. Monitoreo la plataforma, investigo y resuelvo incidentes críticos, contribuyendo a mantener la fiabilidad del servicio y minimizar interrupciones para los equipos de desarrollo.",
         "- Platform stack: Grafana, GCP, SQL, Monitoring, AWS, Oracle, tsuru, zabbix, Linux, Bash"
       ],
       "description_pt": [
-        "Criei documentação detalhada e procedimentos operacionais padrão (SOPs) para processos críticos, garantindo consistência, conformidade e transferência de conhecimento dentro da equipe. Paticipei ativamente na revisão e atualização de SOPs existentes para refletir as melhores práticas e mudanças nos processos, com esse trabalho reduzimos em 30% o tempo de resolução de incidentes e melhoramos a eficiência operacional, e reduzimos tmabém a dependência de conhecimento tácito, facilitando o treinamento de novos membros da equipe. Monitoro a plataforma, investigo e resolvo incidentes críticos, contribuindo para manter a confiabilidade do serviço e minimizar interrupções para as equipes de desenvolvimento.",
         "- Platform stack: Grafana, GCP, SQL, Monitoring, AWS, Oracle, tsuru, zabbix, Linux, Bash"
         
       
@@ -83,15 +80,12 @@
       "title_pt": "Analista de infraestrutura",
       "subtitle": "T.O. Brasil",
       "description": [
-        "Worked as an Infrastructure Analyst in Rio de Janeiro, Brazil. Significant reduction in critical incidents and increased service reliability through proactive monitoring, process automation, and infrastructure optimization.",
         "- Platform stack: Grafana, SQL, Monitoring, GCP, AWS, Oracle"
       ],
       "description_es": [
-        "Trabajó como Analista de infraestructura en Río de Janeiro, Brasil. Reducción significativa de incidentes críticos y aumento de la fiabilidad del servicio mediante la implementación de monitorización proactiva, automatización de procesos y optimización de infraestructura.",
         "- Platform stack: Grafana, SQL, Monitoring, GCP, AWS, Oracle"
       ],
       "description_pt": [
-        "Atuei como Analista de infraestrutura no Rio de Janeiro, Brasil. Redução significativa de incidentes críticos e aumento da confiabilidade do serviço, através da implementação de monitoramento proativo, automação de processos e otimização de infraestrutura.",
         "- Platform stack: Grafana, SQL, Monitoring, GCP, AWS, Oracle"
       ]
     },
