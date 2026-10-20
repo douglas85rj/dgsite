@@ -58,14 +58,26 @@
       "title": "Infrastructure Solutions Analyst",
       "subtitle": "Hitss Brazil",
       "description": [
-        "- Platform stack: Grafana, GCP, SQL, Monitoring, AWS, Oracle, tsuru, zabbix, Linux, Bash"
+        "• Platform Monitoring and Support: Direct involvement in AdTech operations (linear and digital sales). Monitoring of application availability, performance, and health using Grafana, GCP logs, and Tsuru (Globo’s internal PaaS, designed to accelerate deployments and simplify cloud-based application management).",
+"• Technical Documentation and GitOps: Maintenance and updates for the team’s internal documentation portal and runbooks, hosted on GitLab, utilizing GitOps practices for version control and continuous deployment of content.",
+"• Automation and Generative AI: Development of automation scripts in Bash/Python and the use of Artificial Intelligence tools to assist in incident investigation and documentation enhancement—technically validating AI-generated suggestions while ensuring compliance with data protection policies and API integration standards.",
+"• Incident Management and Databases: Handling critical support tickets (L2), conducting root cause analysis, and implementing technical solutions and workarounds, including performing advanced queries on MySQL and Oracle databases.",
+"- Platform stack: Grafana, GCP, SQL, Monitoring, AWS, Oracle, Tsuru, Zabbix, Linux, Bash",
+        "- Platform stack: Grafana, GCP, SQL, Monitoring, AWS, Oracle, tsuru, zabbix, Linux, Bash, GitLab"
       ],
       "description_es": [
-
-        "- Platform stack: Grafana, GCP, SQL, Monitoring, AWS, Oracle, tsuru, zabbix, Linux, Bash"
+        "• Monitoreo y Soporte de Plataformas: Participación directa en la operación de AdTech (venta lineal y digital). Monitoreo de la disponibilidad, el rendimiento y el estado de las aplicaciones mediante el uso de Grafana, registros (logs) de GCP y Tsuru (PaaS interno de Globo, enfocado en acelerar los despliegues y facilitar la gestión de aplicaciones en la nube).",
+"• Documentación Técnica y GitOps: Mantenimiento y actualización del portal interno de documentación y *runbooks* del equipo, alojado en GitLab, empleando prácticas de GitOps para el control de versiones y el despliegue continuo del contenido.",
+"• Automatización y uso de IA Generativa: Creación de scripts de automatización en Bash/Python y utilización de herramientas de Inteligencia Artificial para apoyar la investigación de incidentes y la mejora de la documentación, validando técnicamente las sugerencias y respetando las políticas de protección de datos e integraciones mediante API.",
+"• Gestión de Incidentes y Bases de Datos: Atención de incidencias críticas (N2), investigación de la causa raíz y aplicación de soluciones y alternativas técnicas, realizando consultas avanzadas en bases de datos MySQL y Oracle.",
+        "- Platform stack: Grafana, GCP, SQL, Monitoring, AWS, Oracle, tsuru, zabbix, Linux, Bash, Gitlab"
       ],
       "description_pt": [
-        "- Platform stack: Grafana, GCP, SQL, Monitoring, AWS, Oracle, tsuru, zabbix, Linux, Bash"
+        "* Monitoramento e Sustentação de Plataformas: Atuação direta na operação de AdTech (venda linear e digital). Monitoramento de disponibilidade, desempenho e saúde das aplicações utilizando Grafana, logs do GCP e Tsuru (PaaS interno da Globo, focado em acelerar deploys e facilitar o gerenciamento de apps em nuvem).",
+        "• Documentação Técnica e GitOps: Manutenção e atualização do portal interno de documentações e runbooks da equipe, hospedado no GitLab, utilizando práticas de GitOps para versionamento e deploy contínuo do conteúdo.",
+        "• Automação e Uso de IA Generativa: Criação de scripts de automação em Bash/Python e utilização de ferramentas de Inteligência Artificial para apoiar na investigação de incidentes e aprimoramento de documentação, validando tecnicamente as sugestões e respeitando políticas de proteção de dados e integrações via API.",
+        "• Gestão de Incidentes e Banco de Dados: Atendimento a chamados críticos (N2), investigação de causa raiz e aplicação de soluções e contornos técnicos realizando consultas avançadas em bancos de dados MySQL e Oracle.",
+        "- Platform stack: Grafana, GCP, SQL, Monitoring, AWS, Oracle, tsuru, zabbix, Linux, Bash, GitLab"
         
       
       ]
@@ -80,12 +92,23 @@
       "title_pt": "Analista de infraestrutura",
       "subtitle": "T.O. Brasil",
       "description": [
+        "• Log Analysis and Observability: Involved in analyzing and resolving incidents related to Globo’s AdTech operations, performing queries on application and API logs via the cloud (GCP) to diagnose errors monitored through Grafana, with alerts delivered via Slack.",
+"• Data Management and Reporting: Utilized Oracle and MS SQL Server databases to execute complex queries, generate reports, and update the database for a legacy system (SIS.com).",
+"* Collaboration and Process Improvement: Actively participated in weekly meetings with the development team (SRE/DevOps) focused on improving operational processes, conducting root cause analysis for incidents, and aligning on technical solutions for the operation.",
+"- Platform stack: Grafana, SQL, Monitoring, GCP, AWS, Oracle",
         "- Platform stack: Grafana, SQL, Monitoring, GCP, AWS, Oracle"
       ],
       "description_es": [
+        "• Análisis de logs y observabilidad: Participación en el análisis y la resolución de incidentes relacionados con la operación AdTech de Globo, realizando consultas de logs de aplicaciones y API a través de la nube (GCP) para diagnosticar errores monitoreados mediante Grafana, con alertas gestionadas a través de Slack.",
+"• Gestión de datos e informes: Uso de bases de datos Oracle y MS SQL Server para la ejecución de consultas complejas, la generación de informes y la actualización de la base de datos del sistema heredado (SIS.com).",
+"* Colaboración y mejora de procesos: Participación activa en reuniones semanales con el equipo de desarrollo (SRE/DevOps) centradas en la mejora de los procesos operativos, el análisis de la causa raíz de los incidentes y la alineación de soluciones técnicas para la operación.",
+"- Stack tecnológico: Grafana, SQL, monitoreo, GCP, AWS, Oracle",
         "- Platform stack: Grafana, SQL, Monitoring, GCP, AWS, Oracle"
       ],
       "description_pt": [
+        "• Análise de Logs e Observabilidade: Atuação na análise e solução de incidentes relacionados à operação AdTech da Globo, realizando consultas de logs de aplicações e APIs via nuvem (GCP) para diagnosticar erros monitorados via Grafana e com alertas via Slack.",
+        "• Gestão de Dados e Relatórios: Utilização de bancos de dados Oracle e MS SQL Server para execução de consultas complexas, geração de relatórios e atualização da base de dados do sistema legado (SIS.com).",
+        "* Colaboração e Melhoria de Processos: Participação ativa em reuniões semanais com o time de desenvolvimento (SRE/DevOps) focadas na melhoria de processos operacionais, análise de causa raiz de incidentes e alinhamento de soluções técnicas para a operação.",
         "- Platform stack: Grafana, SQL, Monitoring, GCP, AWS, Oracle"
       ]
     },
@@ -107,6 +130,7 @@
         "- Platform stack: React, Java, SQL, Linux, JavaScript, Node.js, MongoDB, Git, GitLab CI/CD"
       ],
       "description_pt": [
+        "Pipelines e Versionamento (CI/CD): Utilização de Git para versionamento de código e configuração de rotinas de integração e entrega contínua utilizando pipelines do GitLab CI/CD, garantindo deploys ágeis e controle de versão.\n\nDesenvolvimento de Aplicações: Atuação na construção e manutenção de sistemas corporativos, desenvolvendo o backend em Java e Node.js, e interfaces de frontend interativas utilizando React e JavaScript.\n\nBanco de Dados e SO: Operação, deploy e sustentação das aplicações rodando em servidores Linux. Modelagem, integração e consultas complexas utilizando bancos de dados relacionais (SQL) e NoSQL (MongoDB).",
         "Atuei como Desenvolvedor Full Stack no Rio de Janeiro, Brasil.",
         "- Platform stack: React, Java, SQL, Linux, JavaScript, Node.js, MongoDB, Git, GitLab CI/CD"
       ]
